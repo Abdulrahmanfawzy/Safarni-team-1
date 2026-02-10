@@ -5,6 +5,13 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Text colors */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-disabled: var(--text-disabled);
+  --color-text-inverse: var(--text-inverse);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -46,6 +53,31 @@
 }
 
 :root {
+  /* Gray scale */
+  /* text-color */
+  --text-primary-gray: #111928; /* main text */
+  --text-secondary-gray: #4b5563; /* secondary text */
+  --text-muted-gray: #6b7280; /* hints / placeholder */
+  --text-label-gray: #373737;
+  /* bg-color */
+  --bg-primary-gray: #f4f4f4;
+  --bg-secondary-gray: #6b7280;
+  --bg-muted-gray: #f3f4f6;
+    /* border-color */
+  --border-primary-gray: #9CA3AF;
+
+  /* Blue scale */
+  /* text-color */
+  --text-primary-blue: #1e429f;
+  --text-secondary-blue: #1a56db;
+  --text-muted-blue: #1c64f2;
+  /* bg-color */
+  --bg-primary-blue: #1e429f;
+  --bg-secondary-blue: #ebf5ff;
+      /* border-color */
+  --border-primary-blue: #1E429F;
+  --border-secondary-blue: #0069AB;
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -81,6 +113,41 @@
 }
 
 .dark {
+  /* Gray scale */
+  /* text-color */
+   --text-primary-gray: #e5e7eb;   
+  --text-secondary-gray: #9ca3af;
+  --text-muted-gray: #6b7280;     
+  --text-label-gray: #d1d5db;
+
+  /* bg-color */
+  --bg-primary-gray: #1f1f1f;     
+  --bg-secondary-gray: #2c2c2c;    
+  --bg-muted-gray: #373737;
+
+  /* border-color */
+  --border-primary-gray: #4b5563;  
+
+   /* Blue scale */
+  /* text-color */
+  --text-primary-blue: #93c5fd;   
+  --text-secondary-blue: #60a5fa;  
+  --text-muted-blue: #3b82f6;      
+
+  /* bg-color */
+  --bg-primary-blue: #1e3a8a;     
+  --bg-secondary-blue: #1e40af;    
+
+  /* border-color */
+  --border-primary-blue: #2563eb;
+  --border-secondary-blue: #3b82f6;
+
+  --text-primary: oklch(0.985 0 0);
+  --text-secondary: oklch(0.708 0 0);
+  --text-muted: oklch(0.556 0 0);
+  --text-disabled: oklch(0.374 0 0);
+  --text-inverse: oklch(0.145 0 0);
+
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
