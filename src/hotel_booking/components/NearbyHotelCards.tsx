@@ -39,6 +39,10 @@ const hotels = [
 const NearbyHotelCards = () => {
   return (
     <>
+      <div className="flex justify-between">
+        <h1 className="text-[25px] font-medium text-gray-900">Nearby Hotel</h1>
+        <p className="text-[22px] font-medium text-sky-900">View all</p>
+      </div>
       <div className="cards grid grid-cols-2 gap-6 my-5">
         {hotels.map((hotel) => (
           <div
@@ -57,7 +61,7 @@ const NearbyHotelCards = () => {
                   {hotel.offer}
                 </div>
 
-                <div className="font-semibold flex gap-1 items-center">
+                <div className="font-bold text-xl text-gray-700 flex gap-1 items-center">
                   <Star className="text-yellow-500 w-5 h-5" />
                   {hotel.rate}
                 </div>
