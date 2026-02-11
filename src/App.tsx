@@ -8,6 +8,12 @@ import FirstPage from "./pages/flight booking/FirstPage";
 import ChooseSeat from "./pages/flight booking/ChooseSeat";
 import Flightlayout from "./pages/flight booking/Flightlayout";
 import Flightbooking from "./pages/flight booking/Flightbooking";
+import { ProfilePage } from "./pages/profile/ProfilePage";
+import { PersonalInfoPage } from "./pages/profile/PersonalInfoPage";
+import { AccountSecurityPage } from "./pages/profile/AccountSecurityPage";
+import { MyBookingPage } from "./pages/profile/MyBookingPage";
+import { ProfileLayout } from "./pages/profile/ProfileLayout";
+import { LanguagePage } from "./pages/profile/LanguagePage";
 import HotelBooking from "./pages/hotel_booking/HotelBooking";
 import AvailableRooms from "./pages/hotel_booking/AvailableRooms";
 import HotelAbout from "./pages/hotel_booking/HotelAbout";
@@ -28,6 +34,13 @@ const App = () => {
           <Route path="boarding-pass" element={<BardingPass />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="payment-success" element={<PaymentSuccess />} />
+        </Route>
+        <Route path="/profile" element={<ProfileLayout />} >
+          <Route index element={<ProfilePage />} />
+          <Route path="personal-info" element={<PersonalInfoPage />} />
+          <Route path="account-security" element={<AccountSecurityPage />} />
+          <Route path="my-booking" element={<MyBookingPage />} />
+          <Route path="language" element={<LanguagePage />} />
         </Route>
 
         {/* Hotel Booking */}
