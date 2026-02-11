@@ -12,7 +12,7 @@ const Categories = () => {
       { id: 1, name: 'Flight', img: flight, path: '/flights' },
       { id: 2, name: 'Cars', img: cars, path: '/cars' },
       { id: 3, name: 'Tours', img: tours, path: '/tours' },
-      { id: 4, name: 'hotels', img: hotel, path: '/hotels' },
+      { id: 4, name: 'Hotel', img: hotel, path: '/hotels' },
     ];
     return (
         <div className="categories">

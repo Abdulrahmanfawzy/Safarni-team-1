@@ -5,8 +5,8 @@ import home3 from '@/assets/images/home3.jpg';
 import home4 from '@/assets/images/home4.jpg';
 import home5 from '@/assets/images/home5.jpg';
 import heroMobile from '@/assets/images/hero-mobile.jpg';
-import { NavLink } from 'react-router-dom';
 import SearchComponent from '../common/Search';
+import { NavLink } from 'react-router-dom';
 
 
 const Hero = () => {

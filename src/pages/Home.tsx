@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // assets
 import home1 from "@/assets/images/home1.jpg";
 import home2 from "@/assets/images/home2.jpg";
@@ -137,6 +138,26 @@ const Home = () => {
                 alt="home4"
                 className="w-[194px] h-[171px] rounded-br-[32px] rounded-[16px] object-cover"
               />
+=======
+
+import Hero from '../components/home/Hero';
+import Categories from '../components/home/Categories';
+import Recommendation from '../components/home/Recommendation';
+import Available from '../components/home/Available';
+
+
+
+const Home = () => {
+
+
+    return (
+        <div className="home container mx-auto  mt-2 lg:p-12 p-4">
+            <Hero />
+            <div className="section mt-4 mb-4">
+              <Categories />
+              <Recommendation />
+              <Available />
+>>>>>>> 9cce457 (add desing color from index.css)
             </div>
             <div className="group-three flex flex-col justify-end">
               <img
