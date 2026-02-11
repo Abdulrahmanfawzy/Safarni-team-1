@@ -14,6 +14,12 @@ import { AccountSecurityPage } from "./pages/profile/AccountSecurityPage";
 import { MyBookingPage } from "./pages/profile/MyBookingPage";
 import { ProfileLayout } from "./pages/profile/ProfileLayout";
 import { LanguagePage } from "./pages/profile/LanguagePage";
+import HotelBooking from "./pages/hotel_booking/HotelBooking";
+import AvailableRooms from "./pages/hotel_booking/AvailableRooms";
+import HotelAbout from "./pages/hotel_booking/HotelAbout";
+import CheckIn from "./components/layout/PaymentMathed/CheckIn";
+import CheckOut from "./components/layout/PaymentMathed/CheckOut";
+import Done from "./components/layout/PaymentMathed/Done";
 
 const App = () => {
   return (
@@ -36,6 +42,15 @@ const App = () => {
           <Route path="my-booking" element={<MyBookingPage />} />
           <Route path="language" element={<LanguagePage />} />
         </Route>
+
+        {/* Hotel Booking */}
+        <Route path="/hotels" element={<HotelBooking />} />
+        <Route path="/hotels/availableRooms" element={<AvailableRooms />} />
+        <Route path="/hotels/hotelAbout" element={<HotelAbout />} />
+        {/* Payment page -> check in , check out , check out (done) */}
+        <Route path="/checkin" element={<CheckIn />} />
+        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/checkout/done" element={<Done />} />
       </Routes>
     </>
   );

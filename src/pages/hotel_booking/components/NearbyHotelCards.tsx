@@ -1,4 +1,5 @@
-import Hotel from "../../assets/images/hotel.jpg";
+import Hotel from "../../../assets/images/hotel.jpg";
+
 import { Star, MapPin } from "lucide-react";
 
 const hotels = [
@@ -40,8 +41,8 @@ const NearbyHotelCards = () => {
   return (
     <>
       <div className="flex justify-between">
-        <h1 className="text-[25px] font-medium text-gray-900">Nearby Hotel</h1>
-        <p className="text-[22px] font-medium text-sky-900">View all</p>
+        <h1 className="text-25 font-medium text-gray-900">Nearby Hotel</h1>
+        <p className="text-22 font-medium text-sky-900">View all</p>
       </div>
       <div className="cards grid grid-cols-2 gap-6 my-5">
         {hotels.map((hotel) => (
@@ -67,7 +68,7 @@ const NearbyHotelCards = () => {
                 </div>
               </div>
 
-              <p className="text-[20px] font-medium text-gray-900">
+              <p className="text-xl font-medium text-gray-900">
                 {hotel.name}
               </p>
 
