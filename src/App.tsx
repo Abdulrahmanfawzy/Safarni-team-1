@@ -8,22 +8,28 @@ import FirstPage from "./pages/flight booking/FirstPage";
 import ChooseSeat from "./pages/flight booking/ChooseSeat";
 import Flightlayout from "./pages/flight booking/Flightlayout";
 import Flightbooking from "./pages/flight booking/Flightbooking";
+import SearchPage from "./pages/search/SearchPage";
+import FilterPage from "./pages/search/FilterPage";
+
 
 const App = () => {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="/flights" element={<Flightlayout />}>
-          <Route index path="" element={<FirstPage />} />
+          <Route index element={<FirstPage />} />
           <Route path="flightbooking" element={<Flightbooking />} />
           <Route path="chooseseat" element={<ChooseSeat />} />
           <Route path="boarding-pass" element={<BardingPass />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="payment-success" element={<PaymentSuccess />} />
         </Route>
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/search/filter" element={<FilterPage />} />
       </Routes>
+
     </>
   );
 };

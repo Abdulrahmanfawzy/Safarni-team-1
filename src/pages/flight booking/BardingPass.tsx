@@ -7,8 +7,8 @@ import qr from "./../../assets/qr.png";
 import { Button } from "../../components/ui/button";
 import { Plane } from "lucide-react";
 import Buttoncommon from "../../components/common/Buttoncommon";
-import Back from "../../components/common/back";
-import H1 from "../../components/common/h1";
+import Back from "../../components/common/Back";
+import H1 from "../../components/common/H1";
 
 const BardingPass = () => {
   return (

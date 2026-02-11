@@ -2,7 +2,7 @@ import { useState } from "react";
 import ImageCard from "../../components/common/ImageCard";
 import flight from "../../assets/flight.png";
 import Buttoncommon from "../../components/common/Buttoncommon";
-import Back from "../../components/common/back";
+import Back from "../../components/common/Back";
 
 const ChooseSeat = () => {
   let [seat, useseat] = useState(0);

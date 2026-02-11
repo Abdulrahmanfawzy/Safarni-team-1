@@ -1,0 +1,35 @@
+import {
+    Building2,
+    Castle,
+    Palette,
+    Eye,
+    Waves,
+    Camera,
+    Flag,
+    Umbrella,
+    Plane,
+    MapPin,
+} from "lucide-react";
+import type { Suggestion } from "../types/suggestion";
+
+export const suggestions: Suggestion[] = [
+    { id: 1, title: "Paris...", description: "", icon: MapPin },
+    { id: 2, title: "Paris, ontario", description: "", icon: MapPin },
+    { id: 3, title: "Paris, Texas, United States", description: "", icon: MapPin },
+    { id: 4, title: "Paris, Tennessee, United States", description: "", icon: MapPin },
+    { id: 5, title: "Londen", description: "City of culture", icon: Eye },
+    { id: 6, title: "Sydney", description: "Vibes soar here", icon: Waves },
+    { id: 7, title: "Beijing", description: "Lives in tradition", icon: Building2 },
+    { id: 8, title: "Amsterdam", description: "City of Flowers", icon: Camera },
+    { id: 9, title: "Berlin", description: "City of arts", icon: Palette },
+    { id: 10, title: "Ankara", description: "City of arts", icon: Castle },
+    { id: 11, title: "Pizza", description: "City of arts", icon: Building2 },
+    { id: 12, title: "Washington", description: "City of arts", icon: Flag },
+    { id: 13, title: "Malaysia", description: "Family frindly", icon: Umbrella },
+    { id: 14, title: "Barselona", description: "City of arts", icon: Palette },
+    { id: 15, title: "Florence", description: "City of arts", icon: Palette },
+    { id: 16, title: "Delhi", description: "City of color", icon: Palette },
+    { id: 17, title: "Dhaka", description: "City of arts", icon: Building2 },
+    { id: 18, title: "Istanbul", description: "City of arts", icon: Castle },
+    { id: 19, title: "Egypt", description: "City of arts", icon: Plane },
+];
