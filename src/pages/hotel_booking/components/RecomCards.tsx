@@ -45,10 +45,10 @@ const RecomCards = () => {
   return (
     <>
       <div className="flex justify-between">
-        <h1 className="text-[25px] font-medium text-gray-900">
+        <h1 className="text-25 font-medium text-gray-900">
           Recommendation
         </h1>
-        <p className="text-[22px] font-medium text-sky-900">View all</p>
+        <p className="text-22 font-medium text-sky-900">View all</p>
       </div>
       <div className="cards flex justify-between my-5">
         {hotels.map((hotel) => (
@@ -74,7 +74,7 @@ const RecomCards = () => {
               </div>
             </div>
 
-            <p className="text-[22px] font-medium text-gray-900">
+            <p className="text-22 font-medium text-gray-900">
               {hotel.name}
             </p>
 

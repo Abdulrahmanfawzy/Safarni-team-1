@@ -34,6 +34,7 @@ const App = () => {
         <Route path="/hotels" element={<HotelBooking />} />
         <Route path="/hotels/availableRooms" element={<AvailableRooms />} />
         <Route path="/hotels/hotelAbout" element={<HotelAbout />} />
+        {/* Payment page -> check in , check out , check out (done) */}
         <Route path="/checkin" element={<CheckIn />} />
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/checkout/done" element={<Done />} />
