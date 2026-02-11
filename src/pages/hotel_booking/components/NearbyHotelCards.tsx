@@ -1,4 +1,5 @@
-import Hotel from "../../assets/images/hotel.jpg";
+import Hotel from "../../../assets/images/hotel.jpg";
+
 import { Star, MapPin } from "lucide-react";
 
 const hotels = [

@@ -8,6 +8,12 @@ import FirstPage from "./pages/flight booking/FirstPage";
 import ChooseSeat from "./pages/flight booking/ChooseSeat";
 import Flightlayout from "./pages/flight booking/Flightlayout";
 import Flightbooking from "./pages/flight booking/Flightbooking";
+import HotelBooking from "./pages/hotel_booking/HotelBooking";
+import AvailableRooms from "./pages/hotel_booking/AvailableRooms";
+import HotelAbout from "./pages/hotel_booking/HotelAbout";
+import CheckIn from "./components/layout/PaymentMathed/CheckIn";
+import CheckOut from "./components/layout/PaymentMathed/CheckOut";
+import Done from "./components/layout/PaymentMathed/Done";
 
 const App = () => {
   return (
@@ -23,6 +29,14 @@ const App = () => {
           <Route path="checkout" element={<Checkout />} />
           <Route path="payment-success" element={<PaymentSuccess />} />
         </Route>
+
+        {/* Hotel Booking */}
+        <Route path="/hotels" element={<HotelBooking />} />
+        <Route path="/hotels/availableRooms" element={<AvailableRooms />} />
+        <Route path="/hotels/hotelAbout" element={<HotelAbout />} />
+        <Route path="/checkin" element={<CheckIn />} />
+        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/checkout/done" element={<Done />} />
       </Routes>
     </>
   );
