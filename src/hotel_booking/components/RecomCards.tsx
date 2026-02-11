@@ -1,5 +1,6 @@
 import Hotel from "../../assets/images/hotel.jpg";
 import { Star, MapPin } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const hotels = [
   {
@@ -9,6 +10,7 @@ const hotels = [
     rate: 4.2,
     offer: "10%Off",
     image: Hotel,
+    path: "availableRooms",
   },
   {
     id: 2,
@@ -17,6 +19,7 @@ const hotels = [
     rate: 4.5,
     offer: "15%Off",
     image: Hotel,
+    path: "availableRooms",
   },
   {
     id: 3,
@@ -25,6 +28,7 @@ const hotels = [
     rate: 4.7,
     offer: "20%Off",
     image: Hotel,
+    path: "availableRooms",
   },
   {
     id: 4,
@@ -33,6 +37,7 @@ const hotels = [
     rate: 4.3,
     offer: "12%Off",
     image: Hotel,
+    path: "availableRooms",
   },
 ];
 
@@ -47,8 +52,9 @@ const RecomCards = () => {
       </div>
       <div className="cards flex justify-between my-5">
         {hotels.map((hotel) => (
-          <div
+          <NavLink
             key={hotel.id}
+            to={hotel.path}
             className="flex flex-col gap-2 p-4 bg-white rounded-2xl shadow-xl w-72"
           >
             <img
@@ -76,7 +82,7 @@ const RecomCards = () => {
               <MapPin className="w-5 h-5" />
               <p>{hotel.location}</p>
             </div>
-          </div>
+          </NavLink>
         ))}
       </div>
     </>
