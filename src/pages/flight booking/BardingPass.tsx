@@ -1,19 +1,8 @@
-import React from "react";
 import ImageCard from "../../components/common/ImageCard";
 import flight from "./../../assets/flight.png";
 import icon from "./../../assets/icon.png";
 import person from "./../../assets/person.png";
 import qr from "./../../assets/qr.png";
-import InputFiled from "../../components/common/InputFiled";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 
 import { Button } from "../../components/ui/button";
 import { Plane } from "lucide-react";
@@ -21,7 +10,7 @@ import { Plane } from "lucide-react";
 const BardingPass = () => {
   return (
     <>
-      <div className="px-25">
+      <section className="pl-25 pr-10">
         <Button variant={"outline"} className="rounded-full size-15 my-2">
           b
         </Button>
@@ -108,7 +97,7 @@ const BardingPass = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

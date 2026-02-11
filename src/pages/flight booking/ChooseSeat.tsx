@@ -1,8 +1,7 @@
-import React, { useState, type ReactEventHandler } from "react";
+import { useState } from "react";
 import { Button } from "../../components/ui/button";
 import ImageCard from "../../components/common/ImageCard";
 import flight from "../../assets/flight.png";
-import InputFiled from "../../components/common/InputFiled";
 
 const ChooseSeat = () => {
   let [seat, useseat] = useState(0);
@@ -20,10 +19,10 @@ const ChooseSeat = () => {
 
   return (
     <>
-      <Button variant={"outline"} className="rounded-full size-15 my-2">
+      <Button variant={"outline"} className="rounded-full size-15 my-2 ml-25">
         b
       </Button>
-      <div className="min-w-screen  flex justify-center items-center gap-x-6  pt-27 pb-18">
+      <div className="max-w-screen  flex justify-center items-center gap-x-6 pb-18">
         <div className="w-[50%] h-full ">
           <div className="w-152 h-183.5 pl-25">
             <ImageCard img={flight} />

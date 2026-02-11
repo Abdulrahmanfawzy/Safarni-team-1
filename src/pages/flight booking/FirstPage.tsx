@@ -1,4 +1,3 @@
-import React from "react";
 import ImageCard from "../../components/common/ImageCard";
 import flight from "./../../assets/flight.png";
 import InputFiled from "../../components/common/InputFiled";
@@ -10,17 +9,19 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "../../components/ui/select";
 import { Button } from "../../components/ui/button";
 
 const FirstPage = () => {
   return (
-    <div className="min-w-screen h-screen flex justify-center items-center gap-x-6  pt-27 pb-18">
+    <section className="max-w-screen h-screen flex justify-center items-center gap-x-6  pt-27 pb-18">
+      {/* image card */}
       <div className="w-[50%] h-full ">
         <div className="w-152 h-183.5 pl-25">
           <ImageCard img={flight} />
         </div>
       </div>
+      {/* input location  */}
       <div className="w-[50%] h-full space-y-4 px-24">
         <div className="group-btn flex gap-2">
           <Button
@@ -88,7 +89,7 @@ const FirstPage = () => {
           </Button>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

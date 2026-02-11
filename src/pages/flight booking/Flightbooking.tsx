@@ -1,10 +1,9 @@
-import React from "react";
 import { Button } from "../../components/ui/button";
 import { Plane } from "lucide-react";
 
 const Flightbooking = () => {
   return (
-    <div className="px-25">
+    <section className="px-25">
       <Button variant={"outline"} className="rounded-full size-15 my-2">
         b
       </Button>
@@ -18,7 +17,7 @@ const Flightbooking = () => {
           </h1>
         </div>
         <div className="grid grid-cols-2 gap-x-6 gap-y-7">
-          {[1, 2, 3, 4, 5, 6].map((item) => (
+          {[1, 2, 3, 4, 5, 6].map(() => (
             <div className="card w-full text-center rounded-xl  shadow-sm content-center px-8 py-4 space-y-4 cursor-pointer">
               <div className="flex justify-between items-center  ">
                 <div className="">
@@ -49,7 +48,7 @@ const Flightbooking = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
