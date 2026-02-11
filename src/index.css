@@ -22,6 +22,7 @@
   --color-text-secondary-gray: var(--text-secondary-gray);
   --color-text-muted-gray: var(--text-muted-gray);
   --color-text-label-gray: var(--text-label-gray);
+  --color-text-icon-gray: var(--text-icon-gray);
 
 
   /* Gray backgrounds */
@@ -105,6 +106,7 @@
   --text-secondary-gray: #4b5563; /* secondary text */
   --text-muted-gray: #6b7280; /* hints / placeholder */
   --text-label-gray: #373737;
+   --text-icon-gray: #9CA3AF;
   /* bg-color */
   --bg-primary-gray: #f4f4f4;
   --bg-secondary-gray: #6b7280;
@@ -168,6 +170,7 @@
   --text-secondary-gray: #9ca3af;
   --text-muted-gray: #6b7280;     
   --text-label-gray: #d1d5db;
+  --text-icon-gray: #4b5563;
  
   /* bg-color */
   --bg-primary-gray: #1f1f1f;     

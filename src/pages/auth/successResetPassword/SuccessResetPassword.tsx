@@ -13,7 +13,7 @@ import {
 import {ChevronLeft } from "lucide-react";
 
 
-const ResetPassword = () => {
+const SuccessResetPassword = () => {
   
 
     return (
@@ -77,4 +77,4 @@ click below to log in magically.
         </section>
     );
 };
-export default ResetPassword;
+export default SuccessResetPassword;
