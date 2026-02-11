@@ -74,7 +74,7 @@ const cards = [
   },
 ];
 
-export default function FavoriteCards() {
+export default function FavoritePage() {
   return (
     <>
       <div className="space-y-6 container pb-10">
