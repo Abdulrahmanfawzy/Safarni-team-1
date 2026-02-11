@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Home, Heart, Search, SlidersHorizontal} from 'lucide-react';
+import { Home, Heart, Search, SlidersHorizontal, User } from 'lucide-react';
 import logo from '@/assets/images/logo.png';
 
 const Navbar = () => {
@@ -12,15 +12,15 @@ const Navbar = () => {
           <img className="w-12" src={logo} alt="logo" />
           <p className="text-xl font-bold text-[#1E429F]">Safarni</p>
         </div>
-        
+
         <ul className="flex gap-12">
           <li>
-            <NavLink to="/" className={({ isActive }) => 
+            <NavLink to="/" className={({ isActive }) =>
               `font-bold text-xl ${isActive ? 'text-[#1E429F]' : 'text-gray-600'} hover:text-[#1E429F]`
             }>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/favorites" className={({ isActive }) => 
+            <NavLink to="/favorites" className={({ isActive }) =>
               `font-bold text-xl ${isActive ? 'text-[#1E429F]' : 'text-gray-600'} hover:text-[#1E429F]`
             }>Favorite</NavLink>
           </li>
@@ -33,8 +33,10 @@ const Navbar = () => {
           <NavLink to="/filters" className='text-[#AFAFAF] cursor-pointer' >
             <SlidersHorizontal />
           </NavLink>
-          <NavLink to="/profile" className='w-8 h-8 rounded-full bg-gray-200' > 
-            <img src="" alt="" />
+          <NavLink to="/profile" className='w-8 h-8 rounded-full bg-gray-200' >
+            <div className="flex h-full w-full items-center justify-center">
+              <User className="w-5 h-5 text-gray-500" />
+            </div>
           </NavLink>
         </div>
       </div>
@@ -45,7 +47,7 @@ const Navbar = () => {
         <div className="fixed bottom-0 left-0 right-0 bg-white shadow-[0_-4px_10px_rgba(0,0,0,0.1)] py-2 px-6 flex justify-around items-end z-50 rounded-t-[30px] pb-4">
           {/* Home Link */}
           <NavLink to="/" className={mobileLinkStyle}>
-          {({ isActive }) => (
+            {({ isActive }) => (
               <>
                 <div className={`${isActive ? 'bg-[#4169E1] p-3 rounded-full shadow-lg -mt-10 border-4 border-white text-white' : 'text-gray-400'} transition-all`}>
                   <Home size={24} />
