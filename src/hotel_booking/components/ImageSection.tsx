@@ -3,13 +3,13 @@ import Hotel from "../../assets/images/hotel.jpg";
 const ImageSection = () => {
   return (
     <>
-      <div className="w-2.5/5 h-auto relative">
+      <div className="w-[50%] h-auto relative">
         <img
           src={Hotel}
           alt="Hotel"
           className="w-full h-full object-cover rounded-2xl"
         />
-        <div className="absolute bottom-10 right-6 z-50 bg-white/90 backdrop-blur-md rounded-2xl p-3 shadow-lg">
+        <div className="absolute bottom-10 right-18 z-50 bg-white/90 backdrop-blur-md rounded-2xl p-3 shadow-lg">
           <div className="flex gap-3">
             {/* Image 1 */}
             <img

@@ -1,5 +1,6 @@
 import { Star, Bed, Bath, SquareDashed, Camera } from "lucide-react";
 import ImageSection from "./components/ImageSection";
+import { NavLink } from "react-router-dom";
 const HotelAbout = () => {
   return (
     <>
@@ -83,9 +84,12 @@ const HotelAbout = () => {
               Total price : <span className="text-blue-500">$150.00</span>/night
             </p>
 
-            <button className="w-full py-3 rounded-md bg-[#1E429F] text-white text-xl font-semibold hover:bg-[#16357a] transition">
+            <NavLink
+              to="/hotels/checkin"
+              className="w-full py-3 text-center rounded-md bg-[#1E429F] text-white text-xl font-semibold hover:bg-[#16357a] transition"
+            >
               Book Now
-            </button>
+            </NavLink>
           </div>
         </div>
       </div>

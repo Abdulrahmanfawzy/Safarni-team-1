@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ImageSection from "./components/ImageSection";
 import { Star } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const CheckIn = () => {
   const [openSubmit, setOpenSubmit] = useState(false);
@@ -169,9 +170,13 @@ const CheckIn = () => {
                 </div>
               </div>
 
-              <button className="w-full py-3 rounded-xl bg-[#1E429F] text-white text-lg font-semibold hover:bg-[#16357a] transition">
+              <NavLink
+                to="/hotels/checkout"
+                className="block w-full py-3 text-center  rounded-md bg-[#1E429F] text-white text-lg font-semibold hover:bg-[#16357a] transition"
+              >
                 Book Now
-              </button>
+              </NavLink>
+              
             </div>
           </div>
         )}
