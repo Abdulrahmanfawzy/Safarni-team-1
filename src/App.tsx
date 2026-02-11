@@ -11,9 +11,9 @@ import Flightbooking from "./pages/flight booking/Flightbooking";
 import HotelBooking from "./pages/hotel_booking/HotelBooking";
 import AvailableRooms from "./pages/hotel_booking/AvailableRooms";
 import HotelAbout from "./pages/hotel_booking/HotelAbout";
-import CheckIn from "./pages/hotel_booking/CheckIn";
-import CheckOut from "./pages/hotel_booking/CheckOut";
-import Done from "./pages/hotel_booking/Done";
+import CheckIn from "./components/layout/PaymentMathed/CheckIn";
+import CheckOut from "./components/layout/PaymentMathed/CheckOut";
+import Done from "./components/layout/PaymentMathed/Done";
 
 const App = () => {
   return (
@@ -34,9 +34,9 @@ const App = () => {
         <Route path="/hotels" element={<HotelBooking />} />
         <Route path="/hotels/availableRooms" element={<AvailableRooms />} />
         <Route path="/hotels/hotelAbout" element={<HotelAbout />} />
-        <Route path="/hotels/checkin" element={<CheckIn />} />
-        <Route path="/hotels/checkout" element={<CheckOut />} />
-        <Route path="/hotels/checkout/done" element={<Done />} />
+        <Route path="/checkin" element={<CheckIn />} />
+        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/checkout/done" element={<Done />} />
       </Routes>
     </>
   );

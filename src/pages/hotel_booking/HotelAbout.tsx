@@ -94,7 +94,7 @@ const HotelAbout = () => {
           </p>
 
           <NavLink
-            to="/hotels/checkin"
+            to="/checkin"
             className="w-full py-3 text-center rounded-md bg-[#1E429F] text-white text-xl font-semibold hover:bg-[#16357a] transition"
           >
             Book Now

@@ -1,7 +1,7 @@
-import cardImage from "../../assets/images/cardImage.png";
-import paypal from "../../assets/images/logos_paypal.png";
-import Mastercard from "../../assets/images/Mastercard.png";
-import Visa from "../../assets/images/Visa.png";
+import cardImage from "../../../assets/images/cardImage.png";
+import paypal from "../../../assets/images/logos_paypal.png";
+import Mastercard from "../../../assets/images/Mastercard.png";
+import Visa from "../../../assets/images/Visa.png";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CirclePlus, CreditCardIcon, Mail, User2 } from "lucide-react";
@@ -268,7 +268,7 @@ const CheckOut = () => {
           )}
 
           <NavLink
-            to="/hotels/checkout/done"
+            to="/checkout/done"
             className="block w-full py-3 text-center  rounded-md bg-[#1E429F] text-white text-lg font-semibold hover:bg-[#16357a] transition"
           >
             Continue
