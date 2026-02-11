@@ -1,5 +1,5 @@
-import done from "../assets/images/done.png";
-import checkCircle from "../assets/images/checkCircle.png";
+import done from "../../assets/images/done.png";
+import checkCircle from "../../assets/images/checkCircle.png";
 
 import { NavLink } from "react-router-dom";
 

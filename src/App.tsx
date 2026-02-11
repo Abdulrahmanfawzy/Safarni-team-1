@@ -8,12 +8,12 @@ import FirstPage from "./pages/flight booking/FirstPage";
 import ChooseSeat from "./pages/flight booking/ChooseSeat";
 import Flightlayout from "./pages/flight booking/Flightlayout";
 import Flightbooking from "./pages/flight booking/Flightbooking";
-import HotelBooking from "./hotel_booking/HotelBooking";
-import AvailableRooms from "./hotel_booking/AvailableRooms";
-import HotelAbout from "./hotel_booking/HotelAbout";
-import CheckIn from "./hotel_booking/CheckIn";
-import CheckOut from "./hotel_booking/CheckOut";
-import Done from "./hotel_booking/Done";
+import HotelBooking from "./pages/hotel_booking/HotelBooking";
+import AvailableRooms from "./pages/hotel_booking/AvailableRooms";
+import HotelAbout from "./pages/hotel_booking/HotelAbout";
+import CheckIn from "./pages/hotel_booking/CheckIn";
+import CheckOut from "./pages/hotel_booking/CheckOut";
+import Done from "./pages/hotel_booking/Done";
 
 const App = () => {
   return (

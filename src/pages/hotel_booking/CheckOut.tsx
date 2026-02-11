@@ -1,7 +1,7 @@
-import cardImage from "../assets/images/cardImage.png";
-import paypal from "../assets/images/logos_paypal.png";
-import Mastercard from "../assets/images/Mastercard.png";
-import Visa from "../assets/images/Visa.png";
+import cardImage from "../../assets/images/cardImage.png";
+import paypal from "../../assets/images/logos_paypal.png";
+import Mastercard from "../../assets/images/Mastercard.png";
+import Visa from "../../assets/images/Visa.png";
 
 import { NavLink } from "react-router-dom";
 import { CirclePlus } from "lucide-react";

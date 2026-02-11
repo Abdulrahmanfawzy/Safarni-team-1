@@ -1,4 +1,4 @@
-import Hotel from "../../assets/images/hotel.jpg";
+import Hotel from "../../../assets/images/hotel.jpg";
 import { Star, MapPin } from "lucide-react";
 import { NavLink } from "react-router-dom";
 

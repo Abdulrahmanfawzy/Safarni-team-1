@@ -1,4 +1,4 @@
-import Hotel from "../../assets/images/hotel.jpg";
+import Hotel from "../../../assets/images/hotel.jpg";
 
 const ImageSection = () => {
   return (
