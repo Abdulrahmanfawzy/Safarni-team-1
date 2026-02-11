@@ -11,8 +11,15 @@ import {
   SelectValue,
 } from "../../components/ui/select";
 import { Button } from "../../components/ui/button";
+import { useForm } from "react-hook-form";
 
 const FirstPage = () => {
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data: any) => {
+    console.log(data);
+  };
+
   return (
     <section className="max-w-screen h-screen flex justify-center items-center gap-x-6  pt-27 pb-18">
       {/* image card */}
@@ -40,14 +47,17 @@ const FirstPage = () => {
             Round Trip
           </Button>
         </div>
-        <form className="w-full h-full flex flex-col justify-center items-center gap-y-6">
+        <form
+          onSubmit={onSubmit}
+          className="w-full h-full flex flex-col justify-center items-center gap-y-6">
           <InputFiled
-            name="Location"
+            {...register("location")}
             id="Location"
             htmlfor="Location"
             placeholder="Montreal,Canada"
           />
           <InputFiled
+            {...register("location")}
             name="Location"
             id="Location"
             htmlfor="Location"
