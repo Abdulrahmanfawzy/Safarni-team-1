@@ -1,12 +1,20 @@
-import { Star, Bed, Bath, SquareDashed, Camera } from "lucide-react";
+import { useState } from "react";
+import { Star } from "lucide-react";
 import ImageSection from "./components/ImageSection";
 import { NavLink } from "react-router-dom";
+import About from "./components/About";
+import Gallery from "./components/Gallery";
+import Review from "./components/Review";
+
 const HotelAbout = () => {
+  const [activeTab, setActiveTab] = useState("about");
+
   return (
     <>
       <div className="flex justify-around m-15 items-stretch gap-5 ">
         {/* Image Section */}
         <ImageSection />
+
         {/* About Section */}
         <div className="w-2/5 flex flex-col gap-5">
           <div className="flex justify-between pt-2">
@@ -28,69 +36,69 @@ const HotelAbout = () => {
             1012 Ocean Avenue, New York, USA
           </p>
 
-          {/* Navigation */}
+          {/* Navigation Tabs */}
           <div className="navgation">
             <ul className="flex justify-between border-b-2 border-b-gray-200 text-gray-900">
-              <li className="pb-2 hover:text-blue-700 hover:border-b-2 hover:border-b-blue-600 cursor-pointer">
+              <li
+                onClick={() => setActiveTab("about")}
+                className={`pb-2 cursor-pointer transition
+                  ${
+                    activeTab === "about"
+                      ? "text-blue-700 border-b-2 border-b-blue-600 font-semibold"
+                      : "hover:text-blue-700 hover:border-b-2 hover:border-b-blue-600"
+                  }
+                `}
+              >
                 About
               </li>
-              <li className="pb-2 hover:text-blue-700 hover:border-b-2 hover:border-b-blue-600 cursor-pointer">
+
+              <li
+                onClick={() => setActiveTab("gallery")}
+                className={`pb-2 cursor-pointer transition
+                  ${
+                    activeTab === "gallery"
+                      ? "text-blue-700 border-b-2 border-b-blue-600 font-semibold"
+                      : "hover:text-blue-700 hover:border-b-2 hover:border-b-blue-600"
+                  }
+                `}
+              >
                 Gallery
               </li>
-              <li className="pb-2 hover:text-blue-700 hover:border-b-2 hover:border-b-blue-600 cursor-pointer">
+
+              <li
+                onClick={() => setActiveTab("review")}
+                className={`pb-2 cursor-pointer transition
+                  ${
+                    activeTab === "review"
+                      ? "text-blue-700 border-b-2 border-b-blue-600 font-semibold"
+                      : "hover:text-blue-700 hover:border-b-2 hover:border-b-blue-600"
+                  }
+                `}
+              >
                 Review
               </li>
             </ul>
           </div>
 
-          {/* About Content */}
-          <div className="flex flex-col gap-5">
-            <div className="flex justify-between pt-2 text-gray-900 font-normal text-[22px]">
-              <div className="flex gap-1 items-center">
-                <Bed className="text-blue-500 w-7 h-7" />3 Beds
-              </div>
+          {/*  Content */}
+          <div className="pt-2">
+            {activeTab === "about" && <About />}
 
-              <div className="flex gap-1 items-center">
-                <Bath className="text-blue-500 w-7 h-7" />2 Bath
-              </div>
+            {activeTab === "gallery" && <Gallery />}
 
-              <div className="flex gap-1 items-center">
-                <SquareDashed className="text-blue-500 w-7 h-7" />
-                1,848 Sqft
-              </div>
-            </div>
-
-            <div className="flex justify-between pt-2 text-xl font-medium">
-              <div>
-                Gallery <span className="text-blue-500">(200)</span>
-              </div>
-
-              <div className="flex gap-1 items-center text-blue-700 cursor-pointer">
-                <Camera className="w-7 h-7" />
-                Add Photo
-              </div>
-            </div>
-
-            <p className="text-2xl text-gray-500 leading-relaxed">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard du
-              <span className="text-blue-500 cursor-pointer">
-                {" "}
-                ...Read More{" "}
-              </span>
-            </p>
-
-            <p className="text-2xl">
-              Total price : <span className="text-blue-500">$150.00</span>/night
-            </p>
-
-            <NavLink
-              to="/hotels/checkin"
-              className="w-full py-3 text-center rounded-md bg-[#1E429F] text-white text-xl font-semibold hover:bg-[#16357a] transition"
-            >
-              Book Now
-            </NavLink>
+            {activeTab === "review" && <Review />}
           </div>
+
+          <p className="text-2xl font-medium">
+            Total price : <span className="text-blue-500">$150.00</span>/night
+          </p>
+
+          <NavLink
+            to="/hotels/checkin"
+            className="w-full py-3 text-center rounded-md bg-[#1E429F] text-white text-xl font-semibold hover:bg-[#16357a] transition"
+          >
+            Book Now
+          </NavLink>
         </div>
       </div>
     </>
