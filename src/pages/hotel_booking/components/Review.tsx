@@ -40,7 +40,7 @@ const Review = () => {
             </div>
             <p className="text-xl text-gray-600 font-medium">11 months ago</p>
           </div>
-          <p className="text-[22px] text-gray-700 font-normal">
+          <p className="text-22 text-gray-700 font-normal">
             I really enjoyed my stay—the room was clean, the staff were
             friendly, and everything I needed was nearby.
           </p>

@@ -64,10 +64,10 @@ const AvailableRooms = () => {
     <>
       <div className="m-15">
         <div className="flex justify-between">
-          <h1 className="text-[25px] font-medium text-gray-900">
+          <h1 className="text-25 font-medium text-gray-900">
             Available Rooms
           </h1>
-          <p className="text-[22px] font-medium text-sky-900">View all</p>
+          <p className="text-22 font-medium text-sky-900">View all</p>
         </div>
         {/* Available Rooms */}
         <div className="cards grid grid-cols-4 gap-6 my-5">
@@ -83,7 +83,7 @@ const AvailableRooms = () => {
                 className="w-full h-48 rounded-md object-cover"
               />
 
-              <p className="text-[22px] font-medium text-gray-900">
+              <p className="text-22 font-medium text-gray-900">
                 {room.name}
               </p>
 

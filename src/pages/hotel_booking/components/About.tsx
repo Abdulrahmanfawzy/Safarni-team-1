@@ -3,7 +3,7 @@ const About = () => {
   return (
     <>
       <div className="flex flex-col gap-5">
-        <div className="flex justify-between pt-2 text-gray-900 font-normal text-[22px]">
+        <div className="flex justify-between pt-2 text-gray-900 font-normal text-22">
           <div className="flex gap-1 items-center">
             <Bed className="text-blue-500 w-7 h-7" />3 Beds
           </div>
