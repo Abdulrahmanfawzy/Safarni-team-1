@@ -1,5 +1,3 @@
-
-
 import { Button } from "@/components/ui/button";
 import {
     Card,
@@ -12,9 +10,10 @@ import {
     Field,
 } from "@/components/ui/field";
 
-import {ChevronLeft} from "lucide-react";
+import {ChevronLeft } from "lucide-react";
 
-const WelcomePage = () => {
+
+const ResetPassword = () => {
   
 
     return (
@@ -38,22 +37,23 @@ const WelcomePage = () => {
                 <div className="hidden md:block w-1/2 max-h-full px-4">
                     <img
                         className="w-full max-h-4/5 object-contain"
-                        src="src/assets/auth/welcomePage/welcome.png"
-                        alt="Welcome illustration"
+                        src="src/assets/auth/resetPassword/resetPassword.png"
+                        alt="reset password illustration"
                     />
                 </div>
                 <div className="flex justify-center w-full md:w-1/2 px-4">
                     <Card className="border-0 shadow-none w-full md:max-w-full sm:max-w-md">
                         <CardHeader className="text-center">
-                            <CardTitle>
-                                <h3 className="font-medium text-text-primary-gray text-28">
-                                    Welcome
+                            <CardTitle className="flex flex-col justify-center items-center">
+                                <img src="src/assets/auth/authIcons/checkIcon.png" alt="check icon"/>
+                                <h3 className="font-medium text-text-primary-gray text-28 mt-6">
+                                    password reset
                                 </h3>
                             </CardTitle>
                             <CardDescription>
-                                <p className="font-normal text-21 text-text-secondary-gray!">
-                                   Safarni is your all-in-one travel guide. Discover destinations, compare trip prices,
-                                    book flights, hotels, car rentals, and local tours — all through one interactive experience.
+                                <p className="font-normal text-18 text-text-muted-gray!">
+                                  your password has been  successfully reset
+click below to log in magically.
                                 </p>
                             </CardDescription>
                         </CardHeader>
@@ -65,17 +65,7 @@ const WelcomePage = () => {
                                         className="font-semibold text-20! h-14 w-full text-white mb-6"
                                         variant="default"
                                     >
-                                      Sign Up
-                                    </Button>
-
-                                       <Button
-                                        type="submit"
-                                        size={"lg"}
-                                        className="font-semibold text-20! h-14 w-full text-text-primary-blue border-border-primary-blue"
-                                        variant="outline"
-                                        
-                                    >
-                                     Login
+                                      Login
                                     </Button>
                                 </Field>
                             
@@ -87,4 +77,4 @@ const WelcomePage = () => {
         </section>
     );
 };
-export default WelcomePage;
+export default ResetPassword;
