@@ -23,14 +23,17 @@
   --color-text-muted-gray: var(--text-muted-gray);
   --color-text-label-gray: var(--text-label-gray);
 
+
   /* Gray backgrounds */
   --color-bg-primary-gray: var(--bg-primary-gray);
   --color-bg-secondary-gray: var(--bg-secondary-gray);
   --color-bg-muted-gray: var(--bg-muted-gray);
   --color-bg-muted-gray: var(--bg-muted-gray);
+  --color-bg-icon-gray: var(--bg-icon-gray);
 
   /* Gray borders */
   --color-border-primary-gray: var(--border-primary-gray);
+  --color-border-separator-gray: var(--border-separator-gray);
 
   /* Blue text */
   --color-text-primary-blue: var(--text-primary-blue);
@@ -107,8 +110,10 @@
   --bg-secondary-gray: #6b7280;
   --bg-muted-gray: #f3f4f6;
   --bg-separator-gray: #373737;
+  --bg-icon-gray: #9CA3AF;
     /* border-color */
   --border-primary-gray: #9CA3AF;
+  --border-separator-gray: #373737;
 
   /* Blue scale */
   /* text-color */
@@ -163,15 +168,17 @@
   --text-secondary-gray: #9ca3af;
   --text-muted-gray: #6b7280;     
   --text-label-gray: #d1d5db;
-
+ 
   /* bg-color */
   --bg-primary-gray: #1f1f1f;     
   --bg-secondary-gray: #2c2c2c;    
   --bg-muted-gray: #373737;
+  --bg-icon-gray: #4b5563;
  
 
   /* border-color */
   --border-primary-gray: #4b5563;  
+  --border-separator-gray: #d1d5db;
 
    /* Blue scale */
   /* text-color */

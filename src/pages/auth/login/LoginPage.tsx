@@ -1,8 +1,7 @@
-import * as React from "react";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
-import { toast } from "sonner";
-import * as z from "zod";
+
 
 import { Button } from "@/components/ui/button";
 import {
@@ -28,7 +27,9 @@ import {
 } from "@/components/ui/input-group";
 import { Lock, ChevronLeft, Mail } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import loginSchema, { type LoginFormValues } from "@/lib/schemas/login.schema";
+import type { LoginFormValues } from "@/lib/schemas/login.schema";
+import loginSchema from "@/lib/schemas/login.schema";
+
 
 const LoginPage = () => {
     const form = useForm<LoginFormValues>({
@@ -170,9 +171,9 @@ const LoginPage = () => {
                                     </Button>
 
                                     <div className="flex justify-center items-center my-4 w-[30%]">
-                                        <Separator />
+                                        <Separator className="border-border-separator-gray border!"/>
                                         <span className="mx-3 text-text-muted-gray">Or</span>
-                                        <Separator className="text-text-muted-gray" />
+                                        <Separator className="border-border-separator-gray border!"/>
                                     </div>
 
                                     <Button

@@ -1,7 +1,7 @@
 
 import { z } from "zod";
 
-export const loginSchema = z.object({
+const loginSchema = z.object({
   email: z
     .string()
     .nonempty("Email is required.")
