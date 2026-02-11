@@ -11,9 +11,17 @@ import {
   SelectValue,
 } from "../../components/ui/select";
 import { Button } from "../../components/ui/button";
+import { useForm } from "react-hook-form";
 import Buttoncommon from "../../components/common/Buttoncommon";
+import { MapPinned, RefreshCcw } from "lucide-react";
 
 const FirstPage = () => {
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data: any) => {
+    console.log(data);
+  };
+
   return (
     <section className="max-w-screen h-screen flex justify-center items-center gap-x-6  pt-27 pb-18">
       {/* image card */}
@@ -27,49 +35,50 @@ const FirstPage = () => {
         <div className="group-btn flex gap-2">
           <Button
             variant={"secondary"}
-            className="text-2xl py-4 px-6 h-16 hover:text-blue-900 rounded-[254px] focus:bg-blue-500/20 focus:text-blue-900">
+            className="text-2xl py-4 px-6 h-16 hover:text-blue-900  rounded-[254px] focus:bg-blue-500/20 focus:text-blue-900">
+            <RefreshCcw className="size-8" />
             Round Trip
           </Button>
         </div>
-        <form className="w-full h-full flex flex-col justify-center items-center gap-y-6">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="w-full h-full flex flex-col justify-center items-center gap-y-6">
           <InputFiled
-            name="Location"
+            {...register("Location")}
             id="Location"
             htmlfor="Location"
             placeholder="Montreal,Canada"
           />
           <InputFiled
-            name="Destination"
+            {...register("Destination")}
             id="Destination"
             htmlfor="Destination"
             placeholder="Montreal,Canada"
           />
           <div className="flex justify-between items-center w-full gap-x-5">
             <InputFiled
-              name="Departure"
+              {...register("Departure")}
               id="Departure"
               htmlfor="Departure"
               placeholder="Dec 16th, 2025"
             />
             <InputFiled
-              name="Return"
+              {...register("Return")}
               id="Return"
               htmlfor="Return"
               placeholder="Jan 6th,2025"
             />
           </div>
-          <Select>
+          <Select {...register("Passenger")}>
             <SelectTrigger className="rounded-lg pt-2.5 px-4 w-full h-14">
               <SelectValue placeholder="Passenger" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectLabel>Fruits</SelectLabel>
-                <SelectItem value="apple">Apple</SelectItem>
-                <SelectItem value="banana">Banana</SelectItem>
-                <SelectItem value="blueberry">Blueberry</SelectItem>
-                <SelectItem value="grapes">Grapes</SelectItem>
-                <SelectItem value="pineapple">Pineapple</SelectItem>
+                <SelectLabel>flight</SelectLabel>
+                <SelectItem value="flight1">flight</SelectItem>
+                <SelectItem value="flight2">flight</SelectItem>
+                <SelectItem value="flight3">flight</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>

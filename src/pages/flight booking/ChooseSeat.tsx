@@ -6,16 +6,15 @@ import Back from "../../components/common/Back";
 
 const ChooseSeat = () => {
   let [seat, useseat] = useState(0);
-  const seatclicked = (e) => {
-    if (e.target.classList.contains("bg-blue-500")) {
-      e.target.classList.toggle("bg-blue-500");
-      e.target.classList.toggle("bg-green-500");
-      useseat((perv) => perv + 1);
-    } else if (e.target.classList.contains("bg-green-500")) {
-      e.target.classList.toggle("bg-green-500");
-      e.target.classList.toggle("bg-blue-500");
-      useseat((perv) => perv - 1);
+  const seatclicked = (e: React.MouseEvent<HTMLElement>) => {
+    const target = e.target as HTMLElement;
+    useseat(parseInt(target.innerText));
+    if (target.parentElement?.children) {
+      Array.from(target.parentElement.children).forEach((child) =>
+        child.classList.remove("bg-green-500")
+      );
     }
+    target.classList.add("bg-green-500");
   };
 
   return (
@@ -35,7 +34,7 @@ const ChooseSeat = () => {
             <div className="w-full h-full flex flex-col justify-center items-center gap-y-6">
               <div className="w-full flex justify-between items-center ">
                 {[
-                  { name: "Available", color: "bg-blue-500" },
+                  { name: "Available", color: "bg-bg-primary-blue" },
                   { name: "Selected", color: "bg-green-500" },
                   { name: "Un available", color: "bg-gray-500" },
                 ].map((item) => (
@@ -46,19 +45,19 @@ const ChooseSeat = () => {
                   </div>
                 ))}
               </div>
-              <div className="grid grid-cols-7 gap-8">
+              <div className=" grid grid-cols-7 gap-8">
                 {Array.from({ length: 30 }, (_, index) => {
                   if (index % 5 == 2)
                     return (
                       <>
                         <div
-                          className={`size-12.5 rounded-lg content-center text-center text-white  cursor-pointer`}></div>
+                          className={`size-12.5 rounded-lg content-center text-center text-white `}></div>
                         <div
-                          className={`size-12.5 rounded-lg content-center text-center text-white  cursor-pointer`}></div>
+                          className={`size-12.5 rounded-lg content-center text-center text-white `}></div>
                         <div
                           key={index}
                           onClick={() => seatclicked(event)}
-                          className={`size-12.5 rounded-lg content-center text-center text-white bg-blue-500 cursor-pointer`}>
+                          className={`size-12.5 rounded-lg content-center text-center text-white bg-bg-primary-blue cursor-pointer`}>
                           {index + 1}
                         </div>
                       </>
@@ -67,7 +66,7 @@ const ChooseSeat = () => {
                   return (
                     <div
                       key={index}
-                      className={`size-12.5 rounded-lg content-center text-center text-white bg-blue-500 cursor-pointer`}
+                      className={`size-12.5 rounded-lg content-center text-center text-white bg-bg-primary-blue cursor-pointer`}
                       onClick={() => seatclicked(event)}>
                       {index + 1}
                     </div>
@@ -76,13 +75,13 @@ const ChooseSeat = () => {
               </div>
               <div className="w-full flex justify-between items-center">
                 <h1 className="text-21">Ticket price</h1>
-                <span className="text-25 font-[600px] text-[#1E429F]">
+                <span className="text-25 font-[600px] text-bg-primary-blue">
                   $150.00
                 </span>
               </div>
               <div className="w-full flex justify-between items-center">
                 <h1 className="text-21">your Seat</h1>
-                <span className="text-25 font-[600px] text-[#1E429F]">
+                <span className="text-25 font-[600px] text-bg-primary-blue">
                   {seat}
                 </span>
               </div>
