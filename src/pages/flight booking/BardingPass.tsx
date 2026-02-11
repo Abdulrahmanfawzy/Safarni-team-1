@@ -5,10 +5,11 @@ import person from "./../../assets/person.png";
 import qr from "./../../assets/qr.png";
 
 import { Button } from "../../components/ui/button";
-import { Plane } from "lucide-react";
+import { Armchair, Plane } from "lucide-react";
 import Buttoncommon from "../../components/common/Buttoncommon";
 import Back from "../../components/common/back";
 import H1 from "../../components/common/h1";
+import TimeInCard from "./TimeInCard";
 
 const BardingPass = () => {
   return (
@@ -36,18 +37,12 @@ const BardingPass = () => {
                   <span className="w-full">December 16h, 2022</span>
                 </div>
                 <div className="flex justify-between items-center w-full text-center   content-center px-8 py-4 border-b  ">
-                  <div className="">
-                    <h1 className=" text-2xl">7:50</h1>
-                    <p className="text-gray-500 text-2xl">DEL</p>
-                  </div>
+                  <TimeInCard time="7:50" location="DEL" />
                   <div className="  flex flex-col justify-center items-center">
                     <Plane className=" size-4" />
                     <p className="text-gray-500 text-2xl">8:50</p>
                   </div>
-                  <div className="">
-                    <h1 className=" text-2xl">7:50</h1>
-                    <p className="text-gray-500 text-2xl">DEL</p>
-                  </div>
+                  <TimeInCard time="7:50" location="DEL" />
                 </div>
                 <div className="flex justify-between items-center w-full text-center content-center px-8 py-4  border-b">
                   <div className="text-left">
@@ -82,7 +77,7 @@ const BardingPass = () => {
                     </div>
                   </div>
                   <div className="flex justify-between items-center gap-2">
-                    lksjd
+                    <Armchair className="text-bg-primary-blue" />
                     <span className="text-gray-500 text-lg text-center">
                       29A
                     </span>
