@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "../../components/ui/select";
 import { Button } from "../../components/ui/button";
+import Buttoncommon from "../../components/common/Buttoncommon";
 
 const FirstPage = () => {
   return (
@@ -29,16 +30,6 @@ const FirstPage = () => {
             className="text-2xl py-4 px-6 h-16 hover:text-blue-900 rounded-[254px] focus:bg-blue-500/20 focus:text-blue-900">
             Round Trip
           </Button>
-          <Button
-            variant={"secondary"}
-            className="text-2xl py-4 px-6 h-16 hover:text-blue-900 rounded-[254px] focus:bg-blue-500/20 focus:text-blue-900">
-            Round Trip
-          </Button>
-          <Button
-            variant={"secondary"}
-            className="text-2xl py-4 px-6 h-16 hover:text-blue-900 rounded-[254px] focus:bg-blue-500/20 focus:text-blue-900">
-            Round Trip
-          </Button>
         </div>
         <form className="w-full h-full flex flex-col justify-center items-center gap-y-6">
           <InputFiled
@@ -48,28 +39,28 @@ const FirstPage = () => {
             placeholder="Montreal,Canada"
           />
           <InputFiled
-            name="Location"
-            id="Location"
-            htmlfor="Location"
+            name="Destination"
+            id="Destination"
+            htmlfor="Destination"
             placeholder="Montreal,Canada"
           />
           <div className="flex justify-between items-center w-full gap-x-5">
             <InputFiled
-              name="Location"
-              id="Location"
-              htmlfor="Location"
-              placeholder="Montreal,Canada"
+              name="Departure"
+              id="Departure"
+              htmlfor="Departure"
+              placeholder="Dec 16th, 2025"
             />
             <InputFiled
-              name="Location"
-              id="Location"
-              htmlfor="Location"
-              placeholder="Montreal,Canada"
+              name="Return"
+              id="Return"
+              htmlfor="Return"
+              placeholder="Jan 6th,2025"
             />
           </div>
           <Select>
             <SelectTrigger className="rounded-lg pt-2.5 px-4 w-full h-14">
-              <SelectValue placeholder="Select a fruit" />
+              <SelectValue placeholder="Passenger" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
@@ -82,11 +73,7 @@ const FirstPage = () => {
               </SelectGroup>
             </SelectContent>
           </Select>
-          <Button
-            variant={"outline"}
-            className="rounded-lg pt-2.5 px-4 w-full h-14 bg-blue-600 text-[20px] text-white hover:bg-white hover:text-blue-600 font-bold">
-            Search Flights
-          </Button>
+          <Buttoncommon title="Search Flights" link="flightbooking" />
         </form>
       </div>
     </section>

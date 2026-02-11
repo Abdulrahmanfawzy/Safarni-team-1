@@ -7,11 +7,18 @@ interface InputFiledProps {
   placeholder: string;
   htmlfor: string;
   id: string;
+  className?: string;
 }
 
-const InputFiled = ({ name, placeholder, htmlfor, id }: InputFiledProps) => {
+const InputFiled = ({
+  name,
+  placeholder,
+  htmlfor,
+  id,
+  className,
+}: InputFiledProps) => {
   return (
-    <Field className="font-medium text-lg leading-5 ">
+    <Field className={`${className} font-medium text-lg leading-5`}>
       <FieldLabel htmlFor={htmlfor}>{name}</FieldLabel>
       <Input
         id={id}
