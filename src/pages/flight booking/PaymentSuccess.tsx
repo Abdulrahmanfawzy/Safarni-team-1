@@ -1,9 +1,9 @@
 import React from "react";
 import Buttoncommon from "../../components/common/Buttoncommon";
-import H1 from "../../components/common/h1";
+import H1 from "../../components/common/H1";
 import SubTitle from "../../components/common/SubTitle";
 import ImageCard from "../../components/common/ImageCard";
-import Back from "../../components/common/back";
+import Back from "../../components/common/Back";
 import success from "../../assets/success.png";
 import { BookCheck } from "lucide-react";
 

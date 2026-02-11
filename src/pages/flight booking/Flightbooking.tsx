@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../../components/ui/button";
-import { Calendar, Plane } from "lucide-react";
-import Back from "../../components/common/back";
-import TimeInCard from "./TimeInCard";
+import { Plane } from "lucide-react";
+import Back from "../../components/common/Back";
 
 const Flightbooking = () => {
   return (
