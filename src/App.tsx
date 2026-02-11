@@ -1,15 +1,15 @@
-import FirstPage from "./pages/flight booking/FirstPage";
-import Flightbooking from "./pages/flight booking/Flightbooking";
-import ChooseSeat from "./pages/flight booking/ChooseSeat";
-import BardingPass from "./pages/flight booking/BardingPass.tsx";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Navbar from "./components/layout/Navbar";
+
 const App = () => {
   return (
-    <div>
-      <FirstPage />
-      <Flightbooking />
-      <ChooseSeat />
-      <BardingPass />
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </>
   );
 };
 
