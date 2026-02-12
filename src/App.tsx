@@ -2,8 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/layout/Navbar";
 import BardingPass from "./pages/flight booking/BardingPass";
-import Checkout from "./pages/flight booking/Checkout";
-import PaymentSuccess from "./pages/flight booking/PaymentSuccess";
+// import Checkout from "./pages/flight booking/Checkout";
+// import PaymentSuccess from "./pages/flight booking/PaymentSuccess";
 import FirstPage from "./pages/flight booking/FirstPage";
 import ChooseSeat from "./pages/flight booking/ChooseSeat";
 import Flightlayout from "./pages/flight booking/Flightlayout";
@@ -55,6 +55,7 @@ const App = () => {
           <Route path="checkout/done" element={<Done />} />
         </Route>
         mohamed/searcha
+        {/* mohamed/searcha */}
         <Route path="/search" element={<SearchPage />} />
         <Route path="/search/filter" element={<FilterPage />} />
         <Route path="/profile" element={<ProfileLayout />}>

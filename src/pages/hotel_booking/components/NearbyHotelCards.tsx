@@ -1,5 +1,4 @@
 import Hotel from "../../../assets/images/hotel.jpg";
-
 import { Star, MapPin } from "lucide-react";
 
 const hotels = [
@@ -40,35 +39,39 @@ const hotels = [
 const NearbyHotelCards = () => {
   return (
     <>
-      <div className="flex justify-between">
+      {/* Header */}
+      <div className="flex justify-between items-center">
         <h1 className="text-25 font-medium text-gray-900">Nearby Hotel</h1>
-        <p className="text-22 font-medium text-sky-900">View all</p>
+        <p className="text-22 font-medium text-sky-900 cursor-pointer">
+          View all
+        </p>
       </div>
-      <div className="cards grid grid-cols-2 gap-6 my-5">
+      {/* Cards Container */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-5">
         {hotels.map((hotel) => (
           <div
             key={hotel.id}
-            className="flex gap-4 p-4 bg-white rounded-2xl shadow-xl"
+            className="flex gap-4 p-4 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
           >
             <img
               src={hotel.image}
               alt={hotel.name}
-              className="w-36 h-36 rounded-md object-cover"
+              className="w-32 h-32 md:w-36 md:h-36 rounded-md object-cover shrink-0"
             />
 
-            <div className="flex flex-col justify-between w-full py-3">
-              <div className="flex justify-between pt-1">
+            <div className="flex flex-col justify-between w-full py-2">
+              <div className="flex justify-between items-start">
                 <div className="bg-sky-100 py-1 px-3 rounded-2xl text-sm font-medium text-sky-900">
                   {hotel.offer}
                 </div>
 
-                <div className="font-bold text-xl text-gray-700 flex gap-1 items-center">
+                <div className="font-bold text-lg md:text-xl text-gray-700 flex gap-1 items-center">
                   <Star className="text-yellow-500 w-5 h-5" />
                   {hotel.rate}
                 </div>
               </div>
 
-              <p className="text-xl font-medium text-gray-900">
+              <p className="text-lg md:text-xl font-medium text-gray-900">
                 {hotel.name}
               </p>
 
