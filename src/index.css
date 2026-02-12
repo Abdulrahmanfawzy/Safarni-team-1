@@ -223,7 +223,6 @@
     @apply bg-background text-foreground;
   }
 }
-
 @layer utilities {
   .text-18 {
     font-size: var(--text-18);
