@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Home, Heart, Search, SlidersHorizontal } from "lucide-react";
+import { Home, Heart, Search, SlidersHorizontal, User } from "lucide-react";
 import logo from "@/assets/images/logo.png";
 
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="hidden sm:flex justify-around items-center sticky top-0 z-50 bg-white shadow-sm h-20">
         <div className="logo flex flex-col items-center">
           <img className="w-12" src={logo} alt="logo" />
-          <p className="text-xl font-bold text-[#1E429F]">Safarni</p>
+          <p className="text-xl font-bold text-text-primary-blue">Safarni</p>
         </div>
 
         <ul className="flex gap-12">
@@ -35,27 +35,19 @@ const Navbar = () => {
               Favorite
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/compare"
-              className={({ isActive }) =>
-                `font-bold text-xl ${isActive ? "text-[#1E429F]" : "text-gray-600"} hover:text-[#1E429F]`
-              }
-            >
-              Compare
-            </NavLink>
-          </li>
         </ul>
 
         <div className="flex gap-6 items-center">
-          <NavLink to="/search" className="text-[#AFAFAF] cursor-pointer">
+          <NavLink to="/search" className="text-gray-400 cursor-pointer">
             <Search />
           </NavLink>
-          <NavLink to="/filters" className="text-[#AFAFAF] cursor-pointer">
+          <NavLink to="/filters" className="text-gray-400 cursor-pointer">
             <SlidersHorizontal />
           </NavLink>
           <NavLink to="/profile" className="w-8 h-8 rounded-full bg-gray-200">
-            <img src="" alt="" />
+            <div className="flex h-full w-full items-center justify-center">
+              <User className="w-5 h-5 text-gray-500" />
+            </div>
           </NavLink>
         </div>
       </div>
@@ -68,12 +60,12 @@ const Navbar = () => {
             {({ isActive }) => (
               <>
                 <div
-                  className={`${isActive ? "bg-[#4169E1] p-3 rounded-full shadow-lg -mt-10 border-4 border-white text-white" : "text-gray-400"} transition-all`}
+                  className={`${isActive ? "bg-text-secondary-blue p-3 rounded-full shadow-lg -mt-10 border-4 border-white text-white" : "text-gray-400"} transition-all`}
                 >
                   <Home size={24} />
                 </div>
                 <span
-                  className={`text-xs font-medium ${isActive ? "text-[#4169E1]" : "text-gray-400"}`}
+                  className={`text-xs font-medium ${isActive ? "text-text-secondary-blue" : "text-gray-400"}`}
                 >
                   Home
                 </span>
@@ -86,12 +78,12 @@ const Navbar = () => {
             {({ isActive }) => (
               <>
                 <div
-                  className={`${isActive ? "bg-[#4169E1] p-3 rounded-full shadow-lg -mt-10 border-4 border-white text-white" : "text-gray-400"} transition-all`}
+                  className={`${isActive ? "bg-text-secondary-blue p-3 rounded-full shadow-lg -mt-10 border-4 border-white text-white" : "text-gray-400"} transition-all`}
                 >
                   <Heart size={24} />
                 </div>
                 <span
-                  className={`text-xs font-medium ${isActive ? "text-[#4169E1]" : "text-gray-400"}`}
+                  className={`text-xs font-medium ${isActive ? "text-text-secondary-blue" : "text-gray-400"}`}
                 >
                   Favorite
                 </span>

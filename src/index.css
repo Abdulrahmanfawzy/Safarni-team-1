@@ -85,9 +85,12 @@
 :root {
   /* Gray scale */
   /* text-color */
-  --text-primary-gray: #111928; /* main text */
-  --text-secondary-gray: #4b5563; /* secondary text */
-  --text-muted-gray: #6b7280; /* hints / placeholder */
+  --text-primary-gray: #111928;
+  /* main text */
+  --text-secondary-gray: #4b5563;
+  /* secondary text */
+  --text-muted-gray: #6b7280;
+  /* hints / placeholder */
   --text-label-gray: #373737;
   /* bg-color */
   --bg-primary-gray: #f4f4f4;
@@ -184,9 +187,9 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
+  --primary: #111928;
   --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
+  --secondary: #4b5563;
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
@@ -215,6 +218,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -223,25 +227,42 @@
   .text-18 {
     font-size: var(--text-18);
   }
+
   .text-20 {
     font-size: var(--text-20);
   }
+
   .text-21 {
     font-size: var(--text-21);
   }
+
   .text-22 {
     font-size: var(--text-22);
   }
+
   .text-25 {
     font-size: var(--text-25);
   }
+
   .text-28 {
     font-size: var(--text-28);
   }
+
   .text-40 {
     font-size: var(--text-40);
   }
+
   .text-51 {
     font-size: var(--text-51);
+  }
+
+  /* Hide scrollbar but keep scroll functionality */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
