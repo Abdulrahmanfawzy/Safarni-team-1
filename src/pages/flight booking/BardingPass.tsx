@@ -5,23 +5,32 @@ import person from "./../../assets/person.png";
 import qr from "./../../assets/qr.png";
 
 import { Button } from "../../components/ui/button";
-import { Plane } from "lucide-react";
+import { Armchair, Plane } from "lucide-react";
 import Buttoncommon from "../../components/common/Buttoncommon";
-import Back from "../../components/common/back";
-import H1 from "../../components/common/h1";
+import Back from "../../components/common/Back";
+import H1 from "../../components/common/H1";
+import TimeInCard from "./TimeInCard";
+import { DataContext } from "../../hooks/usecontext";
+import { useContext } from "react";
 
 const BardingPass = () => {
+  let Context = useContext(DataContext);
+
+  let { dataflight, setdataflight } = Context as any;
+
+  console.log(dataflight);
+
   return (
     <>
-      <section className="pl-25 pr-10">
+      <section className="md:pl-25 md:pr-10 px-5">
         <Back />
-        <div className="max-w-screen  flex justify-center items-center gap-x-6  pb-18">
-          <div className="w-[50%] h-full ">
+        <div className="max-w-screen  grid md:grid-cols-2 gap-x-6  pb-30">
+          <div className=" h-full max-md:hidden ">
             <div className="w-152 h-183.5 pr-25">
               <ImageCard img={flight} />
             </div>
           </div>
-          <div className="w-[50%] h-full  px-14">
+          <div className=" h-full  px-14">
             <div className="space-y-4 w-full h-full flex flex-col justify-center items-center">
               <H1 title="Boarding Pass" />
               <div className="w-full h-full flex flex-col justify-center shadow-lg rounded-2xl p-2 items-center gap-y-6 relative">
@@ -36,18 +45,12 @@ const BardingPass = () => {
                   <span className="w-full">December 16h, 2022</span>
                 </div>
                 <div className="flex justify-between items-center w-full text-center   content-center px-8 py-4 border-b  ">
-                  <div className="">
-                    <h1 className=" text-2xl">7:50</h1>
-                    <p className="text-gray-500 text-2xl">DEL</p>
-                  </div>
+                  <TimeInCard time="7:50" location="DEL" />
                   <div className="  flex flex-col justify-center items-center">
                     <Plane className=" size-4" />
                     <p className="text-gray-500 text-2xl">8:50</p>
                   </div>
-                  <div className="">
-                    <h1 className=" text-2xl">7:50</h1>
-                    <p className="text-gray-500 text-2xl">DEL</p>
-                  </div>
+                  <TimeInCard time="7:50" location="DEL" />
                 </div>
                 <div className="flex justify-between items-center w-full text-center content-center px-8 py-4  border-b">
                   <div className="text-left">
@@ -82,7 +85,7 @@ const BardingPass = () => {
                     </div>
                   </div>
                   <div className="flex justify-between items-center gap-2">
-                    lksjd
+                    <Armchair className="text-bg-primary-blue" />
                     <span className="text-gray-500 text-lg text-center">
                       29A
                     </span>

@@ -6,7 +6,7 @@ interface ImageCardProps {
 
 const ImageCard: React.FC<ImageCardProps> = ({ img }) => {
   return (
-    <div className="w-full h-full rounded-[30px] bg-[#F4F4F4]">
+    <div className="w-full h-full rounded-[30px] flex items-center justify-center bg-[#F4F4F4]">
       <img src={img} alt="Image Card" className="object-cover object-center" />
     </div>
   );
