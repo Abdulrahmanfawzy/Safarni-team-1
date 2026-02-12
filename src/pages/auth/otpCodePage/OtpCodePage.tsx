@@ -14,21 +14,11 @@ import {
 } from "@/components/ui/card";
 import {
     Field,
-    FieldDescription,
     FieldError,
     FieldGroup,
-    FieldLabel,
 } from "@/components/ui/field";
-import {
-    InputGroup,
-    InputGroupAddon,
-    InputGroupInput,
 
-} from "@/components/ui/input-group";
-import { Lock, ChevronLeft, Mail } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
-import type { LoginFormValues } from "@/lib/schemas/login.schema";
-import loginSchema from "@/lib/schemas/login.schema";
+import {  ChevronLeft } from "lucide-react";
 import type { otpCodeFormValues } from "@/lib/schemas/OtpCodePage";
 import otpCodeSchema from "@/lib/schemas/OtpCodePage";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
