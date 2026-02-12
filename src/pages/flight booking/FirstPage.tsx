@@ -11,15 +11,34 @@ import {
   SelectValue,
 } from "../../components/ui/select";
 import { Button } from "../../components/ui/button";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import Buttoncommon from "../../components/common/Buttoncommon";
 import { MapPinned, RefreshCcw } from "lucide-react";
+import { useContext } from "react";
+import { DataContext } from "../../hooks/usecontext.tsx";
+
+type FormValues = {
+  Location: string;
+  Destination: string;
+  Departure: string;
+  Return: string;
+  Passenger: string;
+};
 
 const FirstPage = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, control } = useForm<FormValues>();
+  const Context = useContext(DataContext);
+
+  if (!Context) {
+    throw new Error(
+      "Context is undefined. Make sure to wrap your component with DataProvider."
+    );
+  }
+
+  let { setdataflight } = Context as any;
 
   const onSubmit = (data: any) => {
-    console.log(data);
+    setdataflight(data);
   };
 
   return (
@@ -44,44 +63,54 @@ const FirstPage = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="w-full h-full flex flex-col justify-center items-center gap-y-6">
           <InputFiled
-            {...register("Location")}
+            register={register}
             id="Location"
             htmlfor="Location"
             placeholder="Montreal,Canada"
+            name="Location"
           />
           <InputFiled
-            {...register("Destination")}
+            register={register}
             id="Destination"
+            name="Destination"
             htmlfor="Destination"
             placeholder="Montreal,Canada"
           />
           <div className="flex justify-between items-center w-full gap-x-5">
             <InputFiled
-              {...register("Departure")}
+              register={register}
               id="Departure"
+              name="Departure"
               htmlfor="Departure"
               placeholder="Dec 16th, 2025"
             />
             <InputFiled
-              {...register("Return")}
+              register={register}
               id="Return"
+              name="Return"
               htmlfor="Return"
               placeholder="Jan 6th,2025"
             />
           </div>
-          <Select {...register("Passenger")}>
-            <SelectTrigger className="rounded-lg pt-2.5 px-4 w-full h-14">
-              <SelectValue placeholder="Passenger" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectLabel>flight</SelectLabel>
-                <SelectItem value="flight1">flight</SelectItem>
-                <SelectItem value="flight2">flight</SelectItem>
-                <SelectItem value="flight3">flight</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
+          <Controller
+            control={control}
+            name="Passenger"
+            render={({ field }) => (
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <SelectTrigger className="rounded-lg pt-2.5 px-4 w-full h-14">
+                  <SelectValue placeholder="Passenger" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Flight</SelectLabel>
+                    <SelectItem value="flight1">flight</SelectItem>
+                    <SelectItem value="flight2">flightlksd</SelectItem>
+                    <SelectItem value="flight3">flighsdft</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            )}
+          />
           <Buttoncommon title="Search Flights" link="flightbooking" />
         </form>
       </div>

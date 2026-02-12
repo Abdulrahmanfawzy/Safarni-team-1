@@ -1,14 +1,24 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ImageCard from "../../components/common/ImageCard";
 import flight from "../../assets/flight.png";
 import Buttoncommon from "../../components/common/Buttoncommon";
 import Back from "../../components/common/Back";
+import { DataContext } from "../../hooks/usecontext";
 
 const ChooseSeat = () => {
   let [seat, useseat] = useState(0);
+  let Context = useContext(DataContext);
+
+  let { dataflight, setdataflight } = Context as any;
+
+  console.log(dataflight);
   const seatclicked = (e: React.MouseEvent<HTMLElement>) => {
     const target = e.target as HTMLElement;
     useseat(parseInt(target.innerText));
+    setdataflight((prev: any) => ({
+      ...prev,
+      seat: parseInt(target.innerText),
+    }));
     if (target.parentElement?.children) {
       Array.from(target.parentElement.children).forEach((child) =>
         child.classList.remove("bg-green-500")
@@ -22,7 +32,7 @@ const ChooseSeat = () => {
       <section className="md:pl-25">
         <Back />
         <div className="max-w-screen  grid md:grid-cols-2 gap-x-6 max-md:pb-30">
-          <div className=" h-[100%] max-md:hidden ">
+          <div className="  max-md:hidden ">
             <div className="w-auto h-full md:pr-15">
               <ImageCard img={flight} />
             </div>
@@ -37,8 +47,10 @@ const ChooseSeat = () => {
                   { name: "Available", color: "bg-bg-primary-blue" },
                   { name: "Selected", color: "bg-green-500" },
                   { name: "Un available", color: "bg-gray-500" },
-                ].map((item) => (
-                  <div className="flex justify-between items-center gap-x-2">
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex justify-between items-center gap-x-2">
                     <span
                       className={`size-3 ${item.color} rounded-full block`}></span>
                     <p className="text-lg text-black">{item.name}</p>
@@ -56,7 +68,7 @@ const ChooseSeat = () => {
                           className={`size-12.5 rounded-lg content-center text-center text-white `}></div>
                         <div
                           key={index}
-                          onClick={() => seatclicked(event)}
+                          onClick={() => seatclicked()}
                           className={`size-12.5 rounded-lg content-center text-center text-white bg-bg-primary-blue cursor-pointer`}>
                           {index + 1}
                         </div>
@@ -67,7 +79,7 @@ const ChooseSeat = () => {
                     <div
                       key={index}
                       className={`size-12.5 rounded-lg content-center text-center text-white bg-bg-primary-blue cursor-pointer`}
-                      onClick={() => seatclicked(event)}>
+                      onClick={() => seatclicked()}>
                       {index + 1}
                     </div>
                   );

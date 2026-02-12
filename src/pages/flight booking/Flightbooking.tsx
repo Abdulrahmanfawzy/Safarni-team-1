@@ -3,8 +3,14 @@ import { Button } from "../../components/ui/button";
 import { Calendar, Plane } from "lucide-react";
 import Back from "../../components/common/Back";
 import TimeInCard from "./TimeInCard";
+import { useContext } from "react";
+import { DataContext } from "../../hooks/usecontext";
 
 const Flightbooking = () => {
+  let Context = useContext(DataContext);
+
+  let { dataflight, setdataflight } = Context as any;
+  console.log(dataflight);
   return (
     <section className="md:px-25">
       <Back />
@@ -19,9 +25,13 @@ const Flightbooking = () => {
           </h1>
         </div>
         <div className="grid md:grid-cols-2 gap-x-6 gap-y-7">
-          {[1, 2, 3, 4, 5, 6].map(() => (
+          {[1, 2, 3, 4, 5, 6].map((_, index) => (
             <Link
+              key={index}
               to={"/flights/chooseseat"}
+              onClick={() =>
+                setdataflight((prev: any) => ({ ...prev, price: 1300 }))
+              }
               className="card w-full text-center rounded-xl  shadow-sm content-center px-8 py-4 space-y-4 cursor-pointer">
               <div className="flex justify-between items-center  ">
                 <TimeInCard time="7:50" location="DEL" />
