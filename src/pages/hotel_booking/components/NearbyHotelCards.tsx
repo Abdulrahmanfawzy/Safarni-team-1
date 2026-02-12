@@ -56,7 +56,7 @@ const NearbyHotelCards = () => {
             <img
               src={hotel.image}
               alt={hotel.name}
-              className="w-32 h-32 md:w-36 md:h-36 rounded-md object-cover flex-shrink-0"
+              className="w-32 h-32 md:w-36 md:h-36 rounded-md object-cover shrink-0"
             />
 
             <div className="flex flex-col justify-between w-full py-2">

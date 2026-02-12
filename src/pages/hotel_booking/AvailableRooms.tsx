@@ -1,5 +1,6 @@
 import Hotel from "../../assets/images/hotel.jpg";
 import { NavLink } from "react-router-dom";
+import Back from "../../components/common/Back";
 
 const Rooms = [
   {
@@ -63,7 +64,10 @@ const Rooms = [
 const AvailableRooms = () => {
   return (
     <>
-      <div className="lg:m-15 mx-3">
+      <div className="lg:mx-15 lg:my-5 mx-3">
+         <div className="mb-4 ml-6">
+         <Back />
+       </div>
         {/* Header */}
         <div className="flex justify-between items-center">
           <h1 className="text-25 font-medium text-gray-900">

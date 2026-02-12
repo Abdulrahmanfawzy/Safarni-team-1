@@ -1,4 +1,5 @@
 import Hotel from "../../../assets/images/hotel.jpg";
+import Back from "../../../components/common/Back";
 
 const ImageSection = () => {
   return (
@@ -7,10 +8,13 @@ const ImageSection = () => {
         className="
           w-full 
           md:w-[50%] 
-          h-[40vh] md:h-auto 
+          h-[45vh] md:h-auto 
           relative
         "
       >
+        <div className="absolute top-12 left-8 block md:hidden">
+          <Back />
+        </div>
         <img
           src={Hotel}
           alt="Hotel"
@@ -22,7 +26,7 @@ const ImageSection = () => {
           className="
             absolute 
             bottom-4 md:bottom-10
-            w-[93%]
+            w-[84%]
             md:w-[75%]
             left-[48%]
             -translate-x-1/2
@@ -30,7 +34,7 @@ const ImageSection = () => {
             bg-white/90 
             backdrop-blur-md 
             rounded-lg 
-            p-1 md:p-1.5 
+            p-1.5 
             shadow-lg
           "
         >
