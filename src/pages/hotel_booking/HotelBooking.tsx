@@ -3,7 +3,7 @@ import NearbyHotelCards from "./components/NearbyHotelCards";
 const HotelBooking = () => {
   return (
     <>
-      <div className="m-15">
+      <div className="lg:m-15 mx-3">
         {/* Recommendation */}
         <RecomCards />
 
