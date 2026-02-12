@@ -22,6 +22,7 @@ import HotelAbout from "./pages/hotel_booking/HotelAbout";
 import CheckIn from "./components/layout/PaymentMathed/CheckIn";
 import CheckOut from "./components/layout/PaymentMathed/CheckOut";
 import Done from "./components/layout/PaymentMathed/Done";
+import FavoritePage from "./pages/favorites/FavoritePage";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route index element={<Home />} />
+        <Route path="/favorites" element={<FavoritePage />} />
         <Route path="/flights" element={<Flightlayout />}>
           <Route index element={<FirstPage />} />
           <Route path="flightbooking" element={<Flightbooking />} />
