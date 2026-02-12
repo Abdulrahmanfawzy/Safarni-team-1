@@ -22,26 +22,22 @@ import {
   InputGroupInput,
 } from "@/components/ui/input-group";
 import {
-  Lock,
   ChevronLeft,
-  Check,
-  MoveLeft,
+  Mail,
 } from "lucide-react";
 
+import type { forgetPasswordFormValues } from "@/lib/schemas/forgetPassword.schema";
+import forgetPasswordSchema from "@/lib/schemas/forgetPassword.schema";
 
-import type { resetPasswordFormValues } from "@/lib/schemas/resetPassword.schema";
-import resetPasswordSchema from "@/lib/schemas/resetPassword.schema";
-
-const ResetPasswordPage = () => {
-  const form = useForm<resetPasswordFormValues>({
-    resolver: zodResolver(resetPasswordSchema),
+const ForgetPasswordPage = () => {
+  const form = useForm<forgetPasswordFormValues>({
+    resolver: zodResolver(forgetPasswordSchema),
     defaultValues: {
-      newPassword: "",
-      confirmPassword: "",
+      email: ""
     },
   });
 
-  function onSubmit(data: resetPasswordFormValues) {
+  function onSubmit(data: forgetPasswordFormValues) {
     console.log("data", data);
   }
 
@@ -74,105 +70,50 @@ const ResetPasswordPage = () => {
           <Card className="border-0 shadow-none w-full md:max-w-full sm:max-w-md">
             <CardHeader className="text-center">
               <CardTitle className="flex flex-col justify-center items-center">
-                <img src="src/assets/auth/authIcons/lockIcon.png" alt="lock icon"/>
+                 <img src="src/assets/auth/authIcons/keyIcon.png" alt="key icon"/>
                 <h3 className="font-medium text-text-primary-gray text-28 mt-6">
-                  Set new password
+                  Forgot Password?
                 </h3>
               </CardTitle>
               <CardDescription>
                 <p className="font-normal text-18 text-text-muted-gray">
-                  Your New Password Must be Different to
-                  Previously Used Password
+                 please enter your email to reset that password
                 </p>
               </CardDescription>
             </CardHeader>
-            <form id="signUp-form" onSubmit={form.handleSubmit(onSubmit)}>
+            <form id="forget-password-form" onSubmit={form.handleSubmit(onSubmit)}>
               <CardContent>
                 <FieldGroup>
-
                   <Controller
-                    name="newPassword"
+                    name="email"
                     control={form.control}
                     render={({ field, fieldState }) => (
                       <Field
                         className="gap-1"
                         data-invalid={fieldState.invalid}
                       >
-                        <FieldLabel htmlFor="password">
+                        <FieldLabel
+                          htmlFor="email"
+                        >
                           <label className="text-18 font-medium text-text-label-gray">
-                            Password
+                            Email
                           </label>
                         </FieldLabel>
-                        <InputGroup className="rounded-none h-14 max-w-full">
+                        <InputGroup className="max-w-full rounded-none h-14">
                           <InputGroupInput
                             {...field}
                             aria-invalid={fieldState.invalid}
                             id={field.name}
-                            placeholder="***********"
-                            type="password"
+                            placeholder="kneeDue@untitledui.com"
+
                           />
                           <InputGroupAddon>
-                            <Lock />
+                            <Mail />
                           </InputGroupAddon>
                         </InputGroup>
-
                         {fieldState.invalid && (
                           <FieldError errors={[fieldState.error]} />
                         )}
-
-
-                      </Field>
-                    )}
-                  />
-                  <Controller
-                    name="confirmPassword"
-                    control={form.control}
-                    render={({ field, fieldState }) => (
-                      <Field
-                        className="gap-1"
-                        data-invalid={fieldState.invalid}
-                      >
-                        <FieldLabel htmlFor="password">
-                          <label className="text-18 font-medium text-text-label-gray">
-                            Confirm Password
-                          </label>
-                        </FieldLabel>
-                        <InputGroup className="rounded-none h-14 max-w-full">
-                          <InputGroupInput
-                            {...field}
-                            aria-invalid={fieldState.invalid}
-                            id={field.name}
-                            placeholder="***********"
-                            type="password"
-                          />
-                          <InputGroupAddon>
-                            <Lock />
-                          </InputGroupAddon>
-                        </InputGroup>
-
-                        {fieldState.invalid && (
-                          <FieldError errors={[fieldState.error]} />
-                        )}
-
-                        <div className="mt-4 flex flex-col gap-4">
-                          <div className="flex items-center gap-2">
-                            {" "}
-                            <div className="flex justify-center items-center bg-bg-icon-gray text-white h-6 w-6  rounded-full">
-                              <Check size={20} />
-                            </div>
-                            <span className="text-text-muted-gray text-18 font-normal">
-                              must be at least 8 characters</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            {" "}
-                            <div className="flex justify-center items-center bg-bg-icon-gray text-white h-6 w-6  rounded-full">
-                              <Check size={20} />
-                            </div>
-                            <span className="text-text-muted-gray text-18 font-normal">
-                              must contain one special character</span>
-                          </div>
-                        </div>
-
                       </Field>
                     )}
                   />
@@ -191,12 +132,7 @@ const ResetPasswordPage = () => {
                   </Button>
 
                 </Field>
-                <p className="flex gap-3 text-18 font-medium text-text-primary-gray mt-5">
-                  <span className=" text-text-icon-gray">
-                    <MoveLeft />{" "}
-                  </span>
-                  Back To Log In
-                </p>
+           
               </CardFooter>
             </form>
           </Card>
@@ -205,4 +141,4 @@ const ResetPasswordPage = () => {
     </section>
   );
 };
-export default ResetPasswordPage;
+export default ForgetPasswordPage;
