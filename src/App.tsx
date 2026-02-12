@@ -22,12 +22,29 @@ import HotelAbout from "./pages/hotel_booking/HotelAbout";
 import CheckIn from "./components/layout/PaymentMathed/CheckIn";
 import CheckOut from "./components/layout/PaymentMathed/CheckOut";
 import Done from "./components/layout/PaymentMathed/Done";
+import WelcomePage from "./pages/auth/welcomePage/WelcomePage";
+import LoginPage from "./pages/auth/login/LoginPage";
+import SignUpPage from "./pages/auth/signUpPage/SignUpPage";
+import ResetPasswordPage from "./pages/auth/resetPasswordPage/ResetPasswordPage";
+import ForgetPasswordPage from "./pages/auth/forgetPasswordPage/ForgetPasswordPage";
+import SuccessResetPassword from "./pages/auth/successResetPassword/SuccessResetPassword";
+import OtpCodePage from "./pages/auth/otpCodePage/OtpCodePage";
 
 const App = () => {
   return (
     <>
       <Navbar />
       <Routes>
+          {/* Auth routes */}
+        <Route path="/welcome-page" element={<WelcomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="/reset-password" element={<ResetPasswordPage />} />
+        <Route path="/forget-password" element={<ForgetPasswordPage />} />
+        <Route path="/success-reset-password" element={<SuccessResetPassword />} />
+        <Route path="/verify-otp" element={<OtpCodePage />} />
+
+
         <Route index element={<Home />} />
         <Route path="/flights" element={<Flightlayout />}>
           <Route index element={<FirstPage />} />
