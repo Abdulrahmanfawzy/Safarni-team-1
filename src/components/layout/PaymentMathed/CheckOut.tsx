@@ -6,9 +6,11 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CirclePlus, CreditCardIcon, Mail, User2 } from "lucide-react";
 import Back from "../../common/Back";
+import Back from "../../common/Back";
 
 const CheckOut = () => {
   const [methedTab, setMethedTab] = useState("");
+
 <<<<<<< HEAD
   return (
     <>
@@ -149,7 +151,7 @@ const CheckOut = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
           {methedTab === "paypal" && (
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-2">
               <div>
                 <label
                   htmlFor="name"
@@ -206,9 +208,11 @@ const CheckOut = () => {
                     type="text"
                     placeholder="kneeDue@untitledui.com"
                     className="w-full border-0 p-2.5 text-xl font-normal outline-none focus:outline-none focus:ring-0"
+                    className="w-full border-0 p-2.5 text-xl font-normal outline-none focus:outline-none focus:ring-0"
                   />
                 </div>
               </div>
+
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -233,6 +237,7 @@ const CheckOut = () => {
                   <input
                     type="text"
                     placeholder="kneeDue@untitledui.com"
+                    className="w-full border-0 p-2.5 text-xl font-normal outline-none focus:outline-none focus:ring-0"
                     className="w-full border-0 p-2.5 text-xl font-normal outline-none focus:outline-none focus:ring-0"
                   />
                 </div>
@@ -504,6 +509,7 @@ const CheckOut = () => {
           <NavLink
             to="/checkout/done"
             className="block w-full py-3 text-center rounded-md bg-[#1E429F] text-white text-lg font-semibold hover:bg-[#16357a] transition"
+            className="block w-full py-3 text-center rounded-md bg-[#1E429F] text-white text-lg font-semibold hover:bg-[#16357a] transition"
           >
             Continue
           </NavLink>
@@ -511,7 +517,9 @@ const CheckOut = () => {
 >>>>>>> 0abea69 (add buton back)
       </div>
     </div>
+    </div>
   );
 };
+
 
 export default CheckOut;
