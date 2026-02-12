@@ -8,9 +8,10 @@ const Back = () => {
   return (
     <Button
       onClick={() => navigate(-1)}
-      variant={"outline"}
-      className="rounded-full size-15 my-2">
-      <ChevronLeft className="size-8 " />
+      variant={"ghost"}
+      className="cursor-pointer rounded-full absolute text-[var(--text-primary-gray)] bg-[#F3F4F6] w-[50px] h-[50px]"
+    >
+      <ChevronLeft className="size-6" />
     </Button>
   );
 };

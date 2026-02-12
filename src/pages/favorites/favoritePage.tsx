@@ -1,3 +1,4 @@
+import Back from "@/components/common/Back";
 import HeartIcon from "../../components/common/HeartIcon";
 import { Title } from "../../components/common/Title";
 import { Card, CardContent } from "../../components/ui/card";
@@ -79,6 +80,7 @@ export default function FavoritePage() {
     <>
       <div className="space-y-6 container pb-10">
         <div className="relative my-10">
+          <Back />
           <Title title="Favorite" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

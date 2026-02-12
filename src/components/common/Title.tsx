@@ -1,7 +1,9 @@
 export const Title = ({ title }: { title: string }) => {
   return (
-    <div>
-      <h1 className="text-[26px] font-bold text-center">{title}</h1>
-    </div>
+    <>
+      <h1 className="text-[26px] text-[var(--text-primary-gray)] font-bold text-center">
+        {title}
+      </h1>
+    </>
   );
 };
