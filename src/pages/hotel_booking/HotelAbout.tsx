@@ -11,12 +11,23 @@ const HotelAbout = () => {
 
   return (
     <>
-      <div className="flex justify-around m-15 items-stretch gap-5 ">
+      <div
+        className="
+          flex 
+          flex-col 
+          md:flex-row 
+          md:justify-around 
+          m-0 md:m-15 
+          mb-24 md:mb-0
+          items-stretch 
+          gap-5
+        "
+      >
         {/* Image Section */}
         <ImageSection />
 
         {/* About Section */}
-        <div className="w-2/5 flex flex-col gap-5">
+        <div className="w-full md:w-2/5 flex flex-col gap-5 px-2">
           <div className="flex justify-between pt-2">
             <div className="bg-sky-100 py-1.5 px-4 rounded-2xl text-sm font-medium text-sky-900">
               10%Off
@@ -28,17 +39,17 @@ const HotelAbout = () => {
             </div>
           </div>
 
-          <p className="text-3xl font-medium text-gray-900">
+          <p className="text-2xl md:text-3xl font-medium text-gray-900">
             HarborHaven Hideaway
           </p>
 
-          <p className="text-lg font-medium text-gray-500">
+          <p className="text-base md:text-lg font-medium text-gray-500">
             1012 Ocean Avenue, New York, USA
           </p>
 
           {/* Navigation Tabs */}
           <div className="navgation">
-            <ul className="flex justify-between border-b-2 border-b-gray-200 text-gray-900">
+            <ul className="flex justify-between border-b-2 border-b-gray-200 text-gray-900 text-sm md:text-base">
               <li
                 onClick={() => setActiveTab("about")}
                 className={`pb-2 cursor-pointer transition
@@ -80,22 +91,20 @@ const HotelAbout = () => {
             </ul>
           </div>
 
-          {/*  Content */}
+          {/* Content */}
           <div className="pt-2">
             {activeTab === "about" && <About />}
-
             {activeTab === "gallery" && <Gallery />}
-
             {activeTab === "review" && <Review />}
           </div>
 
-          <p className="text-2xl font-medium">
+          <p className="text-xl md:text-2xl font-medium">
             Total price : <span className="text-blue-500">$150.00</span>/night
           </p>
 
           <NavLink
             to="/checkin"
-            className="w-full py-3 text-center rounded-md bg-[#1E429F] text-white text-xl font-semibold hover:bg-[#16357a] transition"
+            className="w-full py-3 text-center rounded-md bg-[#1E429F] text-white text-lg md:text-xl font-semibold hover:bg-[#16357a] transition"
           >
             Book Now
           </NavLink>
