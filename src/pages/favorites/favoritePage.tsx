@@ -143,7 +143,6 @@ export default function FavoritePage() {
           ))}
         </div>
       </div>
-      );
     </>
   );
 }
