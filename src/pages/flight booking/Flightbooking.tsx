@@ -6,7 +6,7 @@ import TimeInCard from "./TimeInCard";
 
 const Flightbooking = () => {
   return (
-    <section className="px-25">
+    <section className="md:px-25">
       <Back />
       <div className="booking  space-y-10">
         <div className="flex justify-center items-center gap-x-12.5  ">
@@ -18,7 +18,7 @@ const Flightbooking = () => {
             <Calendar /> Dec 16th, 2025
           </h1>
         </div>
-        <div className="grid grid-cols-2 gap-x-6 gap-y-7">
+        <div className="grid md:grid-cols-2 gap-x-6 gap-y-7">
           {[1, 2, 3, 4, 5, 6].map(() => (
             <Link
               to={"/flights/chooseseat"}

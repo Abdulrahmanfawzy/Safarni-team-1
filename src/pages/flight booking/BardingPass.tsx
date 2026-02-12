@@ -14,15 +14,15 @@ import TimeInCard from "./TimeInCard";
 const BardingPass = () => {
   return (
     <>
-      <section className="pl-25 pr-10">
+      <section className="md:pl-25 md:pr-10 px-5">
         <Back />
-        <div className="max-w-screen  flex justify-center items-center gap-x-6  pb-18">
-          <div className="w-[50%] h-full ">
+        <div className="max-w-screen  grid md:grid-cols-2 gap-x-6  pb-30">
+          <div className=" h-full max-md:hidden ">
             <div className="w-152 h-183.5 pr-25">
               <ImageCard img={flight} />
             </div>
           </div>
-          <div className="w-[50%] h-full  px-14">
+          <div className=" h-full  px-14">
             <div className="space-y-4 w-full h-full flex flex-col justify-center items-center">
               <H1 title="Boarding Pass" />
               <div className="w-full h-full flex flex-col justify-center shadow-lg rounded-2xl p-2 items-center gap-y-6 relative">

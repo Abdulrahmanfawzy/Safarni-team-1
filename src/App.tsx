@@ -23,7 +23,6 @@ import CheckIn from "./components/layout/PaymentMathed/CheckIn";
 import CheckOut from "./components/layout/PaymentMathed/CheckOut";
 import Done from "./components/layout/PaymentMathed/Done";
 
-
 const App = () => {
   return (
     <>
@@ -35,21 +34,19 @@ const App = () => {
           <Route path="flightbooking" element={<Flightbooking />} />
           <Route path="chooseseat" element={<ChooseSeat />} />
           <Route path="boarding-pass" element={<BardingPass />} />
-          <Route path="checkout" element={<Checkout />} />
-          <Route path="payment-success" element={<PaymentSuccess />} />
+          <Route path="checkout" element={<CheckOut />} />
+          <Route path="checkout/done" element={<Done />} />
         </Route>
- mohamed/searcha
+        mohamed/searcha
         <Route path="/search" element={<SearchPage />} />
         <Route path="/search/filter" element={<FilterPage />} />
-
-        <Route path="/profile" element={<ProfileLayout />} >
+        <Route path="/profile" element={<ProfileLayout />}>
           <Route index element={<ProfilePage />} />
           <Route path="personal-info" element={<PersonalInfoPage />} />
           <Route path="account-security" element={<AccountSecurityPage />} />
           <Route path="my-booking" element={<MyBookingPage />} />
           <Route path="language" element={<LanguagePage />} />
         </Route>
-
         {/* Hotel Booking */}
         <Route path="/hotels" element={<HotelBooking />} />
         <Route path="/hotels/availableRooms" element={<AvailableRooms />} />
@@ -58,9 +55,7 @@ const App = () => {
         <Route path="/checkin" element={<CheckIn />} />
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/checkout/done" element={<Done />} />
- 
       </Routes>
-
     </>
   );
 };

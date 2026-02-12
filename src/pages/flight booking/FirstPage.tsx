@@ -23,15 +23,15 @@ const FirstPage = () => {
   };
 
   return (
-    <section className="max-w-screen h-screen flex justify-center items-center gap-x-6  pt-27 pb-18">
+    <section className="max-w-screen h-full  grid md:grid-cols-2 gap-6  md:pt-27 max-md:mb-30">
       {/* image card */}
-      <div className="w-[50%] h-full ">
-        <div className="w-152 h-183.5 pl-25">
+      <div className=" h-full ">
+        <div className="w-auto md:w-152  h-full max-md:mx-auto md:pl-25">
           <ImageCard img={flight} />
         </div>
       </div>
       {/* input location  */}
-      <div className="w-[50%] h-full space-y-4 px-24">
+      <div className=" h-full space-y-4 px-24">
         <div className="group-btn flex gap-2">
           <Button
             variant={"secondary"}

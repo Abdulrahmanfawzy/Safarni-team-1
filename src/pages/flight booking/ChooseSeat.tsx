@@ -19,15 +19,15 @@ const ChooseSeat = () => {
 
   return (
     <>
-      <section className="pl-25">
+      <section className="md:pl-25">
         <Back />
-        <div className="max-w-screen  flex justify-center items-center gap-x-6 pb-18">
-          <div className="w-[50%] h-full ">
-            <div className="w-152 h-183.5 pr-15">
+        <div className="max-w-screen  grid md:grid-cols-2 gap-x-6 max-md:pb-30">
+          <div className=" h-[100%] max-md:hidden ">
+            <div className="w-auto h-full md:pr-15">
               <ImageCard img={flight} />
             </div>
           </div>
-          <div className="w-[50%] h-full space-y-4 px-24">
+          <div className=" h-full space-y-2 px-24">
             <h1 className="w-full text-center text-[26px] leading-8.75 font-medium text-gray-900">
               Choose seat
             </h1>
@@ -45,13 +45,13 @@ const ChooseSeat = () => {
                   </div>
                 ))}
               </div>
-              <div className=" grid grid-cols-7 gap-8">
+              <div className=" grid md:grid-cols-7 md:gap-x-6 md:gap-y-3 max-md:grid-cols-6 max-md:gap-3">
                 {Array.from({ length: 30 }, (_, index) => {
                   if (index % 5 == 2)
                     return (
                       <>
                         <div
-                          className={`size-12.5 rounded-lg content-center text-center text-white `}></div>
+                          className={`size-12.5 rounded-lg content-center text-center text-white  max-md:hidden`}></div>
                         <div
                           className={`size-12.5 rounded-lg content-center text-center text-white `}></div>
                         <div
