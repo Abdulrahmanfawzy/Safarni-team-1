@@ -65,220 +65,220 @@ const CheckOut = () => {
               Visa
             </div>
           </div>
-        </div>
 
-        {/* Forms */}
-        {methedTab === "paypal" && (
-          <div className="flex flex-col gap-2">
-            <div>
-              <label className="text-lg font-medium text-gray-800">
-                Full Name
-              </label>
-              <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
-                <User2 />
-                <input
-                  type="text"
-                  placeholder="kneeDue@untitledui.com"
-                  className="w-full border-0 p-2.5 text-xl font-normal outline-none focus:outline-none focus:ring-0"
-                />
+          {/* Forms */}
+          {methedTab === "paypal" && (
+            <div className="flex flex-col gap-2">
+              <div>
+                <label className="text-lg font-medium text-gray-800">
+                  Full Name
+                </label>
+                <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
+                  <User2 />
+                  <input
+                    type="text"
+                    placeholder="kneeDue@untitledui.com"
+                    className="w-full border-0 p-2.5 text-xl font-normal outline-none focus:outline-none focus:ring-0"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="text-lg font-medium text-gray-800">
+                  Your Email
+                </label>
+
+                <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
+                  <Mail />
+                  <input
+                    type="text"
+                    placeholder="kneeDue@untitledui.com"
+                    className="w-full border-0 p-2.5 text-xl font-normal outline-none focus:outline-none focus:ring-0"
+                  />
+                </div>
               </div>
             </div>
-
-            <div>
-              <label className="text-lg font-medium text-gray-800">
-                Your Email
-              </label>
-
-              <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
-                <Mail />
-                <input
-                  type="text"
-                  placeholder="kneeDue@untitledui.com"
-                  className="w-full border-0 p-2.5 text-xl font-normal outline-none focus:outline-none focus:ring-0"
-                />
-              </div>
-            </div>
-          </div>
-        )}
-        {methedTab === "mastercard" && (
-          <div className="flex flex-col gap-1">
-            <div>
-              <label
-                htmlFor="name"
-                className="text-lg font-medium text-gray-800"
-              >
-                Full Name
-              </label>
-              <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
-                <User2 />
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="kneeDue@untitledui.com"
-                  className="w-full border-0 p-2.5 text-xl font-normal 
-               outline-none focus:outline-none focus:ring-0"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label
-                htmlFor="name"
-                className="text-lg font-medium text-gray-800"
-              >
-                Your Email
-              </label>
-              <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
-                <Mail />
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="kneeDue@untitledui.com"
-                  className="w-full border-0 p-2.5 text-xl font-normal 
-               outline-none focus:outline-none focus:ring-0"
-                />
-              </div>
-            </div>
-
-            <div className="flex justify-between">
-              <div className="w-[75%]">
+          )}
+          {methedTab === "mastercard" && (
+            <div className="flex flex-col gap-1">
+              <div>
                 <label
                   htmlFor="name"
                   className="text-lg font-medium text-gray-800"
                 >
-                  Valid Date
+                  Full Name
                 </label>
                 <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
+                  <User2 />
                   <input
                     id="name"
                     type="text"
-                    placeholder="12-6-2024"
+                    placeholder="kneeDue@untitledui.com"
                     className="w-full border-0 p-2.5 text-xl font-normal 
                outline-none focus:outline-none focus:ring-0"
                   />
                 </div>
               </div>
 
-              <div className="w-[20%]">
+              <div>
                 <label
                   htmlFor="name"
                   className="text-lg font-medium text-gray-800"
                 >
-                  Cvv
+                  Your Email
                 </label>
                 <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
+                  <Mail />
                   <input
                     id="name"
                     type="text"
-                    placeholder="522"
-                    className="w-full border-0 p-2.5 text-xl font-normal 
-               outline-none focus:outline-none focus:ring-0"
-                  />
-                  <CreditCardIcon />
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-        {methedTab === "visa" && (
-          <div className="flex flex-col gap-1">
-            <div>
-              <label
-                htmlFor="name"
-                className="text-lg font-medium text-gray-800"
-              >
-                Full Name
-              </label>
-              <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
-                <User2 />
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="kneeDue@untitledui.com"
-                  className="w-full border-0 p-2.5 text-xl font-normal 
-               outline-none focus:outline-none focus:ring-0"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label
-                htmlFor="name"
-                className="text-lg font-medium text-gray-800"
-              >
-                Your Email
-              </label>
-              <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
-                <Mail />
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="kneeDue@untitledui.com"
-                  className="w-full border-0 p-2.5 text-xl font-normal 
-               outline-none focus:outline-none focus:ring-0"
-                />
-              </div>
-            </div>
-
-            <div className="flex justify-between">
-              <div className="w-[75%]">
-                <label
-                  htmlFor="name"
-                  className="text-lg font-medium text-gray-800"
-                >
-                  Valid Date
-                </label>
-                <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
-                  <input
-                    id="name"
-                    type="text"
-                    placeholder="12-6-2024"
+                    placeholder="kneeDue@untitledui.com"
                     className="w-full border-0 p-2.5 text-xl font-normal 
                outline-none focus:outline-none focus:ring-0"
                   />
                 </div>
               </div>
 
-              <div className="w-[20%]">
+              <div className="flex justify-between">
+                <div className="w-[75%]">
+                  <label
+                    htmlFor="name"
+                    className="text-lg font-medium text-gray-800"
+                  >
+                    Valid Date
+                  </label>
+                  <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="12-6-2024"
+                      className="w-full border-0 p-2.5 text-xl font-normal 
+               outline-none focus:outline-none focus:ring-0"
+                    />
+                  </div>
+                </div>
+
+                <div className="w-[20%]">
+                  <label
+                    htmlFor="name"
+                    className="text-lg font-medium text-gray-800"
+                  >
+                    Cvv
+                  </label>
+                  <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="522"
+                      className="w-full border-0 p-2.5 text-xl font-normal 
+               outline-none focus:outline-none focus:ring-0"
+                    />
+                    <CreditCardIcon />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          {methedTab === "visa" && (
+            <div className="flex flex-col gap-1">
+              <div>
                 <label
                   htmlFor="name"
                   className="text-lg font-medium text-gray-800"
                 >
-                  Cvv
+                  Full Name
                 </label>
                 <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
+                  <User2 />
                   <input
                     id="name"
                     type="text"
-                    placeholder="522"
+                    placeholder="kneeDue@untitledui.com"
                     className="w-full border-0 p-2.5 text-xl font-normal 
                outline-none focus:outline-none focus:ring-0"
                   />
-                  <CreditCardIcon />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="name"
+                  className="text-lg font-medium text-gray-800"
+                >
+                  Your Email
+                </label>
+                <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
+                  <Mail />
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="kneeDue@untitledui.com"
+                    className="w-full border-0 p-2.5 text-xl font-normal 
+               outline-none focus:outline-none focus:ring-0"
+                  />
+                </div>
+              </div>
+
+              <div className="flex justify-between">
+                <div className="w-[75%]">
+                  <label
+                    htmlFor="name"
+                    className="text-lg font-medium text-gray-800"
+                  >
+                    Valid Date
+                  </label>
+                  <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="12-6-2024"
+                      className="w-full border-0 p-2.5 text-xl font-normal 
+               outline-none focus:outline-none focus:ring-0"
+                    />
+                  </div>
+                </div>
+
+                <div className="w-[20%]">
+                  <label
+                    htmlFor="name"
+                    className="text-lg font-medium text-gray-800"
+                  >
+                    Cvv
+                  </label>
+                  <div className="flex items-center border-2 px-2 rounded-xs text-gray-400 mb-4">
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="522"
+                      className="w-full border-0 p-2.5 text-xl font-normal 
+               outline-none focus:outline-none focus:ring-0"
+                    />
+                    <CreditCardIcon />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        )}
-        {methedTab === "" && (
-          <div className="flex justify-center">
-            <button
-              type="button"
-              className="flex items-center gap-2 
+          )}
+          {methedTab === "" && (
+            <div className="flex justify-center">
+              <button
+                type="button"
+                className="flex items-center gap-2 
                text-gray-900 px-6 py-3  text-xl font-medium "
-            >
-              Add Card
-              <CirclePlus className="w-6 h-6" />
-            </button>
-          </div>
-        )}
+              >
+                Add Card
+                <CirclePlus className="w-6 h-6" />
+              </button>
+            </div>
+          )}
 
-        <NavLink
-          to="/checkout/done"
-          className="block w-full py-3 text-center rounded-md bg-[#1E429F] text-white text-lg font-semibold hover:bg-[#16357a] transition"
-        >
-          Continue
-        </NavLink>
+          <NavLink
+            to="/checkout/done"
+            className="block w-full py-3 text-center rounded-md bg-[#1E429F] text-white text-lg font-semibold hover:bg-[#16357a] transition"
+          >
+            Continue
+          </NavLink>
+        </div>
       </div>
     </div>
   );

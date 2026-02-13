@@ -277,7 +277,6 @@
   scrollbar-width: none;
 
 }
-<<<<<<< HEAD
 
 @utility container {
   @apply mx-auto;
@@ -298,5 +297,3 @@
     max-width: 91rem /* 1536px */;
   }
 }
-=======
->>>>>>> zeyad-hotel_booking
