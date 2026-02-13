@@ -1,4 +1,4 @@
-import type { Country } from "../../lib/types/test.types.ts";
+import type { Country } from "../../lib/types/test.types";
 import CountryCard from "./CountryCard";
 const Countries_Data: Country[] = [
   {
