@@ -1,3 +1,5 @@
+import HeaderThree from "./header-three";
+
 export default function CardToActive() {
   return (
     <div className="p-2 shadow rounded-lg hover:shadow-2xl space-y-2">
@@ -7,7 +9,7 @@ export default function CardToActive() {
           alt=""
         />
       </div>
-      <h3 className="font-bold text-gray-900">Visit the Grand Plaza</h3>
+      <HeaderThree title={"Visit the Grand Plaza"} />
       <p className="text-gray-500 font-medium">
         The heart of Eldoria, surrounded by historical buildings and lively
         cafes.

@@ -2,7 +2,7 @@ import Rating from "./rating";
 
 export default function CardReview() {
   return (
-    <div className="border border-zinc-400 rounded-md p-6 space-y-2">
+    <section className="border border-zinc-400 rounded-md p-6 space-y-2">
       {/* image, name and time */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4 ">
@@ -28,6 +28,6 @@ export default function CardReview() {
         I really enjoyed my stay—the room was clean, the staff were friendly,
         and everything I needed was nearby.
       </p>
-    </div>
+    </section>
   );
 }
