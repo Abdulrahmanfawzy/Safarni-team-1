@@ -224,7 +224,7 @@
     font-family: "Poppins", sans-serif;
     @apply bg-background text-foreground;
   }
-  .container {
+  /* .container {
     @apply mx-auto 
       w-full 
       px-4
@@ -233,7 +233,27 @@
       lg:max-w-[960px]
       xl:max-w-[1140px]
       2xl:max-w-[1320px];
-  }
+  } */
+}
+
+@utility container {
+  @apply mx-auto;
+  width: 95%;
+  @media (width >= 40rem /* 640px */) {
+    max-width: 35rem /* 640px */;
+  }
+  @media (width >= 48rem /* 768px */) {
+    max-width: 43rem /* 768px */;
+  }
+  @media (width >= 64rem /* 1024px */) {
+    max-width: 59rem /* 1024px */;
+  }
+  @media (width >= 80rem /* 1280px */) {
+    max-width: 75rem /* 1280px */;
+  }
+  @media (width >= 96rem /* 1536px */) {
+    max-width: 91rem /* 1536px */;
+  }
 }
 
 @layer utilities {

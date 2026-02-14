@@ -100,7 +100,7 @@ export default function FavoritePage() {
                 <button
                   className="
                   absolute top-5 right-5 lg:top-7 lg:right-7 bg-white rounded-full p-2 shadow 
-                  md:top-7 md:right-7"
+                  md:top-7 md:right-7 cursor-pointer"
                 >
                   <HeartIcon />
                 </button>
@@ -108,29 +108,31 @@ export default function FavoritePage() {
 
               <CardContent className="p-3 space-y-1.5">
                 <div className="flex items-center justify-between gap-1 text-[12px]">
-                  <h3 className="font-medium text-[15px] leading-tight">
+                  <h3 className="font-medium text-[17px] leading-tight">
                     {card.title}
                   </h3>
                   <div className="flex ">
-                    <Star className="w-4 h-4 text-yellow-400 fill-yellow-400 mr-1" />
-                    <span className="font-medium mr-1 ">{card.rating}</span>
-                    <span className="text-xs text-muted-foreground">
+                    <Star className="w-[20px] h-[20px] text-yellow-400 fill-yellow-400 mr-1" />
+                    <span className="text-[15px] font-medium mr-1 ">
+                      {card.rating}
+                    </span>
+                    <span className="text-[15px] text-muted-foreground">
                       ({card.reviews})
                     </span>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between text-[13px] text-muted-foreground">
+                <div className="flex items-center justify-between text-[17px] text-muted-foreground">
                   <p>{card.subtitle}</p>
                   <div>
-                    <span className="rounded-full bg-[var(--bg-primary-blue)] w-[10px] h-[10px] inline-block mr-0.5 mt-1"></span>
-                    <span className="text-[var(--text-primary-blue)]">
+                    <span className="rounded-full bg-[var(--bg-primary-blue)] w-[12px] h-[12px] inline-block mr-0.5 mt-1"></span>
+                    <span className="text-[#6B7280] text-[17px]">
                       {card.time}
                     </span>
                   </div>
                 </div>
 
-                <p className="text-[13px] text-muted-foreground font-medium">
+                <p className="text-[18px] text-muted-foreground font-medium">
                   From
                   <span className="font-bold text-[var(--text-primary-blue)] ml-1">
                     {card.price}

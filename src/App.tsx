@@ -22,7 +22,7 @@ import HotelAbout from "./pages/hotel_booking/HotelAbout";
 import CheckIn from "./components/layout/PaymentMathed/CheckIn";
 import CheckOut from "./components/layout/PaymentMathed/CheckOut";
 import Done from "./components/layout/PaymentMathed/Done";
-import FavoritePage from "./pages/favorites/FavoritePage";
+import FavoritePage from "./pages/favorites/favoritePage";
 
 const App = () => {
   return (
