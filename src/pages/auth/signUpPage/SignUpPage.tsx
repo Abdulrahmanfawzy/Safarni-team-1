@@ -34,6 +34,7 @@ import { Separator } from "@/components/ui/separator";
 import signUpSchema, {
   type signUpFormValues,
 } from "@/lib/schemas/signUp.schema";
+import { Link } from "react-router-dom";
 
 const SignUpPage = () => {
   const form = useForm<signUpFormValues>({
@@ -238,9 +239,9 @@ const SignUpPage = () => {
                 </Field>
                 <p className="text-18 font-medium text-text-primary-gray mt-5">
                   Already have an account?{" "}
-                  <span className="text-18 font-semibold text-text-primary-blue">
+                  <Link to="/login" className="text-18 font-semibold text-text-primary-blue">
                     sign In
-                  </span>
+                  </Link>
                 </p>
               </CardFooter>
             </form>

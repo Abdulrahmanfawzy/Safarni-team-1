@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/field";
 
 import {ChevronLeft} from "lucide-react";
+import { Link } from "react-router-dom";
 
 const WelcomePage = () => {
   
@@ -59,24 +60,14 @@ const WelcomePage = () => {
                         </CardHeader>
                             <CardFooter className="flex flex-col">
                                 <Field className="flex flex-col gap-0" orientation="horizontal">
-                                    <Button
-                                        type="submit"
-                                        size={"lg"}
-                                        className="font-semibold text-20! h-14 w-full text-white mb-6"
-                                        variant="default"
-                                    >
-                                      Sign Up
-                                    </Button>
+                               
+                                  
+                                    <Link to="/sign-up"  className="flex justify-center items-center 
+                                    rounded-2xl bg-bg-primary-blue hover:bg-bg-primary-blue/90 font-semibold text-20! h-14 w-full text-white mb-6">Sign Up</Link>
+                                    <Link to="/login"  className="flex justify-center items-center 
+                                    font-semibold text-20! h-14 w-full text-text-primary-blue 
+                                    border border-border-secondary-blue rounded-2xl  hover:bg-bg-secondary-blue mb-6">Login</Link>
 
-                                       <Button
-                                        type="submit"
-                                        size={"lg"}
-                                        className="font-semibold text-20! h-14 w-full text-text-primary-blue border-border-primary-blue"
-                                        variant="outline"
-                                        
-                                    >
-                                     Login
-                                    </Button>
                                 </Field>
                             
                             </CardFooter>

@@ -31,8 +31,10 @@ import {
 
 import type { resetPasswordFormValues } from "@/lib/schemas/resetPassword.schema";
 import resetPasswordSchema from "@/lib/schemas/resetPassword.schema";
+import { Link, useNavigate } from "react-router-dom";
 
 const ResetPasswordPage = () => {
+   const navigate=useNavigate()
   const form = useForm<resetPasswordFormValues>({
     resolver: zodResolver(resetPasswordSchema),
     defaultValues: {
@@ -43,6 +45,7 @@ const ResetPasswordPage = () => {
 
   function onSubmit(data: resetPasswordFormValues) {
     console.log("data", data);
+    navigate("/success-reset-password")
   }
 
   return (
@@ -191,12 +194,12 @@ const ResetPasswordPage = () => {
                   </Button>
 
                 </Field>
-                <p className="flex gap-3 text-18 font-medium text-text-primary-gray mt-5">
+                <Link to="/login" className="flex gap-3 text-18 font-medium text-text-primary-gray mt-5">
                   <span className=" text-text-icon-gray">
                     <MoveLeft />{" "}
                   </span>
                   Back To Log In
-                </p>
+                </Link>
               </CardFooter>
             </form>
           </Card>

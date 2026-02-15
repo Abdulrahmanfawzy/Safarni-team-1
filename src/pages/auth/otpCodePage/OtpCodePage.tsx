@@ -23,9 +23,11 @@ import type { otpCodeFormValues } from "@/lib/schemas/OtpCodePage";
 import otpCodeSchema from "@/lib/schemas/OtpCodePage";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
 import { REGEXP_ONLY_DIGITS } from "input-otp";
+import { useNavigate } from "react-router-dom";
 
 
 const OtpCodePage = () => {
+     const navigate=useNavigate()
     const form = useForm<otpCodeFormValues>({
         resolver: zodResolver(otpCodeSchema),
         defaultValues: {
@@ -35,6 +37,7 @@ const OtpCodePage = () => {
 
     function onSubmit(data: otpCodeFormValues) {
         console.log("data", data)
+        navigate("/reset-password")
     }
 
     return (

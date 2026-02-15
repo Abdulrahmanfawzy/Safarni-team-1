@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/field";
 
 import {ChevronLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 const SuccessResetPassword = () => {
@@ -59,14 +60,9 @@ click below to log in magically.
                         </CardHeader>
                             <CardFooter className="flex flex-col">
                                 <Field className="flex flex-col gap-0" orientation="horizontal">
-                                    <Button
-                                        type="submit"
-                                        size={"lg"}
-                                        className="font-semibold text-20! h-14 w-full text-white mb-6"
-                                        variant="default"
-                                    >
-                                      Login
-                                    </Button>
+                                  
+                                     <Link to="/sign-up"  className="flex justify-center items-center 
+                                    rounded-2xl bg-bg-primary-blue hover:bg-bg-primary-blue/90 font-semibold text-20! h-14 w-full text-white mb-6">Login</Link>
                                 </Field>
                             
                             </CardFooter>

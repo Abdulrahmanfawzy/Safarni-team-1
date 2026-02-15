@@ -28,8 +28,10 @@ import {
 
 import type { forgetPasswordFormValues } from "@/lib/schemas/forgetPassword.schema";
 import forgetPasswordSchema from "@/lib/schemas/forgetPassword.schema";
+import { useNavigate } from "react-router-dom";
 
 const ForgetPasswordPage = () => {
+  const navigate=useNavigate()
   const form = useForm<forgetPasswordFormValues>({
     resolver: zodResolver(forgetPasswordSchema),
     defaultValues: {
@@ -39,6 +41,7 @@ const ForgetPasswordPage = () => {
 
   function onSubmit(data: forgetPasswordFormValues) {
     console.log("data", data);
+navigate("/verify-otp")
   }
 
   return (

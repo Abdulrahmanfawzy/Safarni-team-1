@@ -29,6 +29,7 @@ import { Lock, ChevronLeft, Mail } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import type { LoginFormValues } from "@/lib/schemas/login.schema";
 import loginSchema from "@/lib/schemas/login.schema";
+import { Link } from "react-router-dom";
 
 
 const LoginPage = () => {
@@ -150,7 +151,7 @@ const LoginPage = () => {
                                                 )}
 
                                                 <FieldDescription>
-                                                    <span className="flex justify-end text-18 font-medium text-text-label-gray">Forgot Password?</span>
+                                                    <Link to="/forget-password" className="flex justify-end text-18 font-medium text-text-label-gray">Forgot Password?</Link>
                                                 </FieldDescription>
                                             </Field>
                                         )}
@@ -191,9 +192,9 @@ const LoginPage = () => {
                                 </Field>
                                 <p className="text-18 font-medium text-text-primary-gray mt-5">
                                     Don't have an account?{" "}
-                                    <span className="text-18 font-semibold text-text-primary-blue">
+                                          <Link to='/sign-up' className="text-18 font-semibold text-text-primary-blue">
                                         sign up
-                                    </span>
+                                    </Link>
                                 </p>
                             </CardFooter>
                         </form>
