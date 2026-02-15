@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/layout/Navbar";
 import BardingPass from "./pages/flight booking/BardingPass";
@@ -31,9 +31,13 @@ import SuccessResetPassword from "./pages/auth/successResetPassword/SuccessReset
 import OtpCodePage from "./pages/auth/otpCodePage/OtpCodePage";
 
 const App = () => {
+    const { pathname } = useLocation();
+    console.log("pathname",pathname)
+  const authRoutes = ["/welcome-page","/login", "/sign-up","/reset-password",
+    "/forget-password","/success-reset-password","/verify-otp"];
   return (
     <>
-      <Navbar />
+       {!authRoutes.includes(pathname) && <Navbar />}
       <Routes>
           {/* Auth routes */}
         <Route path="/welcome-page" element={<WelcomePage />} />
