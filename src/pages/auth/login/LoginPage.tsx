@@ -54,7 +54,7 @@ const LoginPage = () => {
                     <div>
                         <img
                             className="w-25"
-                            src="src/assets/auth/welcomePage/logo.png"
+                            src="src/assets/images/auth/welcomePage/logo.png"
                             alt="logo"
                         />
                     </div>
@@ -65,7 +65,7 @@ const LoginPage = () => {
                 <div className="hidden md:block w-1/2 max-h-full px-4">
                     <img
                         className="w-full max-h-4/5 object-contain"
-                        src="src/assets/auth/login/login.png"
+                        src="src/assets/images/auth/login/login.png"
                         alt="login illustration"
                     />
                 </div>
@@ -184,7 +184,7 @@ const LoginPage = () => {
                                     >
                                         <img
                                             className="h-7 w-7"
-                                            src="src/assets/auth/authIcons/socialIcon.png"
+                                            src="src/assets/images/auth/authIcons/socialIcon.png"
                                             alt="google button"
                                         />
                                     </Button>

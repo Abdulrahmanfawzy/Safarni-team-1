@@ -51,7 +51,7 @@ const ForgetPasswordPage = () => {
           <div>
             <img
               className="w-25"
-              src="src/assets/auth/welcomePage/logo.png"
+              src="src/assets/images/auth/welcomePage/logo.png"
               alt="logo"
             />
           </div>
@@ -62,7 +62,7 @@ const ForgetPasswordPage = () => {
         <div className="hidden md:block w-1/2 max-h-full px-4">
           <img
             className="w-full max-h-4/5 object-contain"
-            src="src/assets/auth/forgetPassword/forgetPassword.png"
+            src="src/assets/images/auth/forgetPassword/forgetPassword.png"
             alt="reset password illustration"
           />
         </div>
@@ -70,7 +70,7 @@ const ForgetPasswordPage = () => {
           <Card className="border-0 shadow-none w-full md:max-w-full sm:max-w-md">
             <CardHeader className="text-center">
               <CardTitle className="flex flex-col justify-center items-center">
-                 <img src="src/assets/auth/authIcons/keyIcon.png" alt="key icon"/>
+                 <img src="src/assets/images/auth/authIcons/keyIcon.png" alt="key icon"/>
                 <h3 className="font-medium text-text-primary-gray text-28 mt-6">
                   Forgot Password?
                 </h3>
