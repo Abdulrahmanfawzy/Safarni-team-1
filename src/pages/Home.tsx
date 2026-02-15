@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // assets
 import home1 from "@/assets/images/home1.jpg";
 import home2 from "@/assets/images/home2.jpg";
@@ -138,26 +137,6 @@ const Home = () => {
                 alt="home4"
                 className="w-[194px] h-[171px] rounded-br-[32px] rounded-[16px] object-cover"
               />
-=======
-
-import Hero from '../components/home/Hero';
-import Categories from '../components/home/Categories';
-import Recommendation from '../components/home/Recommendation';
-import Available from '../components/home/Available';
-
-
-
-const Home = () => {
-
-
-    return (
-        <div className="home container mx-auto  mt-2 lg:p-12 p-4">
-            <Hero />
-            <div className="section mt-4 mb-4">
-              <Categories />
-              <Recommendation />
-              <Available />
->>>>>>> 9cce457 (add desing color from index.css)
             </div>
             <div className="group-three flex flex-col justify-end">
               <img
@@ -197,7 +176,8 @@ const Home = () => {
           </NavLink>
           <NavLink
             to="/filters"
-            className="inline-flex items-center justify-center shrink-0 border border-default-medium text-white bg-brand hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs rounded w-10 h-10 focus:outline-none">
+            className="inline-flex items-center justify-center shrink-0 border border-default-medium text-white bg-brand hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs rounded w-10 h-10 focus:outline-none"
+          >
             <SlidersHorizontal className="text-[#AFAFAF] cursor-pointer" />
           </NavLink>
         </form>
@@ -218,7 +198,8 @@ const Home = () => {
               <NavLink
                 key={cat.id}
                 to={cat.path}
-                className="flex flex-col items-center min-w-[100px] group">
+                className="flex flex-col items-center min-w-[100px] group"
+              >
                 <div className="w-17 h-17 md:w-24 md:h-24 lg:w-35 lg:h-35 rounded-full overflow-hidden border-2 border-transparent shadow-sm">
                   <img
                     src={cat.img}
@@ -246,7 +227,8 @@ const Home = () => {
             {recommendations.map((item) => (
               <div
                 key={item.id}
-                className="bg-white p-2 rounded-[24px] shadow-sm border border-gray-50 min-w-[180px] md:min-w-[220px] lg:min-w-0">
+                className="bg-white p-2 rounded-[24px] shadow-sm border border-gray-50 min-w-[180px] md:min-w-[220px] lg:min-w-0"
+              >
                 <img
                   src={item.image}
                   className="w-full aspect-square object-cover rounded-[20px] mb-3"
@@ -286,7 +268,8 @@ const Home = () => {
             {availableTours.map((tour) => (
               <div
                 key={tour.id}
-                className="bg-white p-3 rounded-[24px] shadow-sm border border-gray-50 flex gap-4 items-center hover:shadow-md transition-shadow cursor-pointer">
+                className="bg-white p-3 rounded-[24px] shadow-sm border border-gray-50 flex gap-4 items-center hover:shadow-md transition-shadow cursor-pointer"
+              >
                 <div className="flex-shrink-0">
                   <img
                     src={tour.image}

@@ -30,6 +30,7 @@ import ForgetPasswordPage from "./pages/auth/forgetPasswordPage/ForgetPasswordPa
 import SuccessResetPassword from "./pages/auth/successResetPassword/SuccessResetPassword";
 import OtpCodePage from "./pages/auth/otpCodePage/OtpCodePage";
 import Destination from "./pages/destination/page";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
       <Navbar />
       <Routes>
         {/* Auth routes */}
+        <Route path="/" element={<WelcomePage />} />
         <Route path="/welcome-page" element={<WelcomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
@@ -47,7 +49,7 @@ const App = () => {
           element={<SuccessResetPassword />}
         />
         <Route path="/verify-otp" element={<OtpCodePage />} />
-        {/* <Route index element={<Home />} /> */}
+        <Route index element={<Home />} />
         <Route path="destination" element={<Destination />} />
         <Route path="/flights" element={<Flightlayout />}>
           <Route index element={<FirstPage />} />
