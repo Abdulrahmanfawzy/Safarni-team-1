@@ -31,6 +31,7 @@ import SuccessResetPassword from "./pages/auth/successResetPassword/SuccessReset
 import OtpCodePage from "./pages/auth/otpCodePage/OtpCodePage";
 import Destination from "./pages/destination/page";
 import Home from "./pages/Home";
+import FavoritePage from "./pages/favorites/favoritePage";
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
       <Routes>
         {/* Auth routes */}
         <Route path="/" element={<WelcomePage />} />
+        <Route path="/favorites" element={<FavoritePage />} />
         <Route path="/welcome-page" element={<WelcomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
