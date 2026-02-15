@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import Navbar from "./components/layout/Navbar";
 import BardingPass from "./pages/flight booking/BardingPass";
 // import Checkout from "./pages/flight booking/Checkout";
@@ -47,7 +47,7 @@ const App = () => {
           element={<SuccessResetPassword />}
         />
         <Route path="/verify-otp" element={<OtpCodePage />} />
-        <Route index element={<Home />} />
+        {/* <Route index element={<Home />} /> */}
         <Route path="destination" element={<Destination />} />
         <Route path="/flights" element={<Flightlayout />}>
           <Route index element={<FirstPage />} />
