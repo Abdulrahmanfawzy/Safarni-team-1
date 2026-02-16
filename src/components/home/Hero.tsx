@@ -14,12 +14,10 @@ const Hero = () => {
         <div className="hero">
             <div className="hero flex justify-around items-center">
                 <div className="hidden sm:flex">
-                    <div className="info flex flex-col gap-4 w-[50%] ">
-                    <div className="title ">
+                    <div className="info flex flex-col justify-center gap-4 w-[50%] ">
                         <h1 className="text-6xl font-bold">Visit The Most<span className="text-text-primary-blue"> Beautiful Places</span> In The World</h1>
                         <p className="text-gray-600 mt-4 w-[75%] text-xl">Explore stunning destinations around the globe. Find travel inspiration,
                             top attractions, and plan your next adventure—all from one platform.</p>
-                    </div>
                     </div>
                     <div className="gallery flex gap-4 relative">
                         <div className="group-one flex flex-col gap-4">

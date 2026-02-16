@@ -19,14 +19,14 @@ const Categories = () => {
                <section className="mt-8">
                   <h2 className="text-2xl  text-text-primary-gray mb-6">Categories</h2>
 
-                  <div className="flex items-center justify-between gap-4 overflow-x-auto pb-2">
+                  <div className="flex overflow-x-auto gap-2 no-scrollbar pb-4 -mx-4 px-4 lg:mx-0 lg:px-0 lg:grid lg:grid-cols-4 lg:overflow-visible">
                     {categories.map((cat) => (
                       <NavLink 
                         key={cat.id} 
                         to={cat.path} 
                         className="flex flex-col items-center min-w-[100px] group"
                       >
-                        <div className="w-17 h-17 md:w-24 md:h-24 lg:w-35 lg:h-35 rounded-full overflow-hidden border-2 border-transparent shadow-sm">
+                        <div className="w-20 h-20 md:w-[120px] md:h-[120px] lg:w-[220px] lg:h-[220px] rounded-full overflow-hidden border-2 border-transparent shadow-sm">
                           <img 
                             src={cat.img} 
                             alt={cat.name} 
