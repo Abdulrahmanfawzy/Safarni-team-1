@@ -68,7 +68,7 @@ const ChooseSeat = () => {
                           className={`size-12.5 rounded-lg content-center text-center text-white `}></div>
                         <div
                           key={index}
-                          onClick={() => seatclicked()}
+                          onClick={() => seatclicked(evevt)}
                           className={`size-12.5 rounded-lg content-center text-center text-white bg-bg-primary-blue cursor-pointer`}>
                           {index + 1}
                         </div>
@@ -79,7 +79,7 @@ const ChooseSeat = () => {
                     <div
                       key={index}
                       className={`size-12.5 rounded-lg content-center text-center text-white bg-bg-primary-blue cursor-pointer`}
-                      onClick={() => seatclicked()}>
+                      onClick={() => seatclicked(event)}>
                       {index + 1}
                     </div>
                   );

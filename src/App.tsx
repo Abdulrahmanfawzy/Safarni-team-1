@@ -2,8 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/layout/Navbar";
 import BardingPass from "./pages/flight booking/BardingPass";
-import Checkout from "./pages/flight booking/Checkout";
-import PaymentSuccess from "./pages/flight booking/PaymentSuccess";
+// import Checkout from "./pages/flight booking/Checkout";
+// import PaymentSuccess from "./pages/flight booking/PaymentSuccess";
 import FirstPage from "./pages/flight booking/FirstPage";
 import ChooseSeat from "./pages/flight booking/ChooseSeat";
 import Flightlayout from "./pages/flight booking/Flightlayout";
@@ -29,23 +29,26 @@ import ResetPasswordPage from "./pages/auth/resetPasswordPage/ResetPasswordPage"
 import ForgetPasswordPage from "./pages/auth/forgetPasswordPage/ForgetPasswordPage";
 import SuccessResetPassword from "./pages/auth/successResetPassword/SuccessResetPassword";
 import OtpCodePage from "./pages/auth/otpCodePage/OtpCodePage";
+import Destination from "./pages/destination/page";
 
 const App = () => {
   return (
     <>
       <Navbar />
       <Routes>
-          {/* Auth routes */}
+        {/* Auth routes */}
         <Route path="/welcome-page" element={<WelcomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="/forget-password" element={<ForgetPasswordPage />} />
-        <Route path="/success-reset-password" element={<SuccessResetPassword />} />
+        <Route
+          path="/success-reset-password"
+          element={<SuccessResetPassword />}
+        />
         <Route path="/verify-otp" element={<OtpCodePage />} />
-
-
         <Route index element={<Home />} />
+        <Route path="destination" element={<Destination />} />
         <Route path="/flights" element={<Flightlayout />}>
           <Route index element={<FirstPage />} />
           <Route path="flightbooking" element={<Flightbooking />} />
@@ -55,6 +58,7 @@ const App = () => {
           <Route path="checkout/done" element={<Done />} />
         </Route>
         mohamed/searcha
+        {/* mohamed/searcha */}
         <Route path="/search" element={<SearchPage />} />
         <Route path="/search/filter" element={<FilterPage />} />
         <Route path="/profile" element={<ProfileLayout />}>

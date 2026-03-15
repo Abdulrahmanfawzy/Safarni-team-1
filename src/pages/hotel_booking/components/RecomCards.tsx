@@ -44,18 +44,42 @@ const hotels = [
 const RecomCards = () => {
   return (
     <>
-      <div className="flex justify-between">
+      {/* Header */}
+      <div className="flex justify-between items-center">
         <h1 className="text-25 font-medium text-gray-900">
           Recommendation
         </h1>
-        <p className="text-22 font-medium text-sky-900">View all</p>
+        <p className="text-22 font-medium text-sky-900 cursor-pointer">
+          View all
+        </p>
       </div>
-      <div className="cards flex justify-between my-5">
+
+      {/* Cards Container */}
+      <div
+        className="
+          flex 
+          gap-4 
+          my-5
+          overflow-x-auto 
+          snap-x snap-mandatory
+          scrollbar-hide
+          md:overflow-x-visible
+          md:flex-wrap
+          md:justify-between
+        "
+      >
         {hotels.map((hotel) => (
           <NavLink
             key={hotel.id}
             to={hotel.path}
-            className="flex flex-col gap-2 p-4 bg-white rounded-2xl shadow-xl w-72"
+            className="
+              flex flex-col gap-2 p-4 
+              bg-white rounded-2xl shadow-xl 
+              w-72 
+              shrink-0
+              snap-start
+              hover:scale-[1.02] transition-transform duration-300
+            "
           >
             <img
               src={hotel.image}
