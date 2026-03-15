@@ -37,7 +37,7 @@ const ChooseSeat = () => {
               <ImageCard img={flight} />
             </div>
           </div>
-          <div className=" h-full space-y-2 px-24">
+          <div className=" h-full space-y-2 max-md:px-10 md-px-24">
             <h1 className="w-full text-center text-[26px] leading-8.75 font-medium text-gray-900">
               Choose seat
             </h1>
@@ -68,7 +68,7 @@ const ChooseSeat = () => {
                           className={`size-12.5 rounded-lg content-center text-center text-white `}></div>
                         <div
                           key={index}
-                          onClick={() => seatclicked(evevt)}
+                          onClick={(e) => seatclicked(e)}
                           className={`size-12.5 rounded-lg content-center text-center text-white bg-bg-primary-blue cursor-pointer`}>
                           {index + 1}
                         </div>
@@ -79,7 +79,7 @@ const ChooseSeat = () => {
                     <div
                       key={index}
                       className={`size-12.5 rounded-lg content-center text-center text-white bg-bg-primary-blue cursor-pointer`}
-                      onClick={() => seatclicked(event)}>
+                      onClick={(e) => seatclicked(e)}>
                       {index + 1}
                     </div>
                   );

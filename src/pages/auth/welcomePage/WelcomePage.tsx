@@ -27,7 +27,7 @@ const WelcomePage = () => {
                     <div>
                         <img
                             className="w-25"
-                            src="src/assets/auth/welcomePage/logo.png"
+                            src="src/assets/images/auth/welcomePage/logo.png"
                             alt="logo"
                         />
                     </div>
@@ -38,7 +38,7 @@ const WelcomePage = () => {
                 <div className="hidden md:block w-1/2 max-h-full px-4">
                     <img
                         className="w-full max-h-4/5 object-contain"
-                        src="src/assets/auth/welcomePage/welcome.png"
+                        src="src/assets/images/auth/welcomePage/welcome.png"
                         alt="Welcome illustration"
                     />
                 </div>

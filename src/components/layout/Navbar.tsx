@@ -69,6 +69,10 @@ const Navbar = () => {
                 >
                   Home
                 </span>
+                <div className={`${isActive ? 'bg-text-secondary-blue p-3 rounded-full shadow-lg -mt-10 border-4 border-white text-white' : 'text-gray-400'} transition-all`}>
+                  <Home size={24} />
+                </div>
+                <span className={`text-xs font-medium ${isActive ? 'text-text-secondary-blue' : 'text-gray-400'}`}>Home</span>
               </>
             )}
           </NavLink>
@@ -87,6 +91,10 @@ const Navbar = () => {
                 >
                   Favorite
                 </span>
+                <div className={`${isActive ? 'bg-text-secondary-blue p-3 rounded-full shadow-lg -mt-10 border-4 border-white text-white' : 'text-gray-400'} transition-all`}>
+                  <Heart size={24} />
+                </div>
+                <span className={`text-xs font-medium ${isActive ? 'text-text-secondary-blue' : 'text-gray-400'}`}>Favorite</span>
               </>
             )}
           </NavLink>

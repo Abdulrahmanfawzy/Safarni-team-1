@@ -30,7 +30,7 @@ const InputFiled = ({
         id={id}
         type="text"
         {...register?.(name)}
-        className="rounded-lg pt-2.5 px-4 w-full h-14 "
+        className="rounded-lg  px-4 w-full h-14 "
         placeholder={placeholder}
       />
     </Field>
