@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import Navbar from "./components/layout/Navbar";
 import BardingPass from "./pages/flight booking/BardingPass";
 // import Checkout from "./pages/flight booking/Checkout";
@@ -30,6 +30,8 @@ import ForgetPasswordPage from "./pages/auth/forgetPasswordPage/ForgetPasswordPa
 import SuccessResetPassword from "./pages/auth/successResetPassword/SuccessResetPassword";
 import OtpCodePage from "./pages/auth/otpCodePage/OtpCodePage";
 import Destination from "./pages/destination/page";
+import Home from "./pages/Home";
+import FavoritePage from "./pages/favorites/favoritePage";
 
 const App = () => {
   return (
@@ -37,6 +39,8 @@ const App = () => {
       <Navbar />
       <Routes>
         {/* Auth routes */}
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/favorites" element={<FavoritePage />} />
         <Route path="/welcome-page" element={<WelcomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />

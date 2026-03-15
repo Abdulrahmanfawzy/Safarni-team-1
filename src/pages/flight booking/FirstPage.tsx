@@ -50,12 +50,18 @@ const FirstPage = () => {
         </div>
       </div>
       {/* input location  */}
-      <div className=" h-full space-y-4 px-24">
+      <div className=" h-full space-y-4 max-md:px-10 md:px-24">
         <div className="group-btn flex gap-2">
           <Button
             variant={"secondary"}
-            className="text-2xl py-4 px-6 h-16 hover:text-blue-900  rounded-[254px] focus:bg-blue-500/20 focus:text-blue-900">
+            className="text-2xl py-4 px-6 h-16 hover:text-blue-900 relative  rounded-[254px]  focus:bg-blue-500/20 focus:text-blue-900">
             <RefreshCcw className="size-8" />
+            {/* <input
+              type="radio"
+              className="absolute top-0 bottom-0 right-0 left-0 opacity-30"
+              name=""
+              id="trip"
+            /> */}
             Round Trip
           </Button>
         </div>
@@ -97,7 +103,7 @@ const FirstPage = () => {
             name="Passenger"
             render={({ field }) => (
               <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <SelectTrigger className="rounded-lg pt-2.5 px-4 w-full h-14">
+                <SelectTrigger className="rounded-lg px-4 w-full h-14">
                   <SelectValue placeholder="Passenger" />
                 </SelectTrigger>
                 <SelectContent>
